@@ -116,3 +116,25 @@ def search_by(name, value):
             res.append(i)
     return res
 
+def occurrence(name, value):
+    """
+    Parameters
+    ----------
+    name : str
+        nom du champs recherche
+    value : str
+        nom recherche dans les enregistrements
+        
+    Cherche le nombre de fois qu'une valeur est trouvée dans unn certain champs
+
+    Returns
+    -------
+    occur : int
+        nombre d'occurences
+
+    """
+    occur = 0
+    for elt in line_list:
+        if(elt[name] == value):
+            occur += 1
+    return occur
