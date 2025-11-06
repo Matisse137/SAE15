@@ -17,6 +17,7 @@ def frequence_region():
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
     plt.show()
+    
 frequence_region () 
 
 
