@@ -4,8 +4,7 @@ import matplotlib.pyplot as plt
 def diagramme_techno_par_region():
 
     # Charger le fichier CSV
-    fichier_csv = pd.read_csv(r"C:/Users/roubaabd/Downloads/experimentations_5G.csv",
-                              encoding="Windows-1252", sep=";", engine="python")
+    fichier_csv = pd.read_csv(r"experimentations_5G.csv", encoding="Windows-1252", sep=";", engine="python")
 
     # Trouver les colonnes "Région" et "Techno"
     region_col = [col for col in fichier_csv.columns if "Région" in col][0]
@@ -31,5 +30,6 @@ def diagramme_techno_par_region():
 
 # Appel de la fonction
 diagramme_techno_par_region()
+
 
     
