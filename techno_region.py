@@ -7,7 +7,7 @@ def diagramme_techno_par_region():
     fichier_csv = pd.read_csv(r"experimentations_5G.csv", encoding="Windows-1252", sep=";", engine="python")
 
     # Trouver les colonnes "Région" et "Techno"
-    region_col = [col for col in fichier_csv.columns if "Eégion" in col][0]
+    region_col = [col for col in fichier_csv.columns if "Région" in col][0]
     techno_cols = [col for col in fichier_csv.columns if "Techno" in col]
 
     # Convertir Oui/Non → 1/0
@@ -32,3 +32,4 @@ diagramme_techno_par_region()
 
 
     
+
