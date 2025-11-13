@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def diagramme_circulaire():
-    fichier_csv=pd.read_csv(r"C:/Users/roubaabd/Downloads/experimentations_5G.csv", encoding="Windows-1252", sep=";", engine="python")
+    fichier_csv=pd.read_csv(r"experimentations_5G.csv", encoding="Windows-1252", sep=";", engine="python")
     fichier_csv.head()
 
     bande_counts = fichier_csv['Bande de fréquences'].value_counts()
@@ -20,6 +20,7 @@ def diagramme_circulaire():
     plt.show()
 
 diagramme_circulaire()
+
 
 
 
