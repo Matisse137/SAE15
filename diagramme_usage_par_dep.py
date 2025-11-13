@@ -8,8 +8,14 @@ def diagramme_usage_par_dep():
     fichier_csv.head()
     
     # Trouver les colonnes "Région" et "Techno"
-    dep_col = [col for col in fichier_csv.columns if "Département" in col][0]
-    usage_cols = [col for col in fichier_csv.columns if "Usage" in col]
+    dep_col = []
+    usage_cols = []
+    
+    for col in fichier_csv.columns:
+        if "Département" == col:
+            dep_col = col  # On assigne la colonne "Département"
+        elif "Usage" in col:
+            usage_cols.append(col)  # Ajouter les colonnes "Techno"
 
     # Convertir Oui/Non → 1/0
     data = fichier_csv[[dep_col] + usage_cols].replace({"Oui": 1, "Non": 0}).fillna(0)
@@ -31,5 +37,4 @@ def diagramme_usage_par_dep():
 
 # Appel de la fonction
 diagramme_usage_par_dep()
-
 
