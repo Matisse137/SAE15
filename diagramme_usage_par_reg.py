@@ -8,8 +8,15 @@ def diagramme_usage_par_reg():
     fichier_csv.head()
     
     # Trouver les colonnes "Région" et "Techno"
-    reg_col = [col for col in fichier_csv.columns if "Région" in col][0]
-    usage_cols = [col for col in fichier_csv.columns if "Usage" in col]
+    reg_col = []
+    usage_cols = []
+    
+    for col in fichier_csv.columns:
+        if "Région" == col:
+            reg_col = col  # On assigne la colonne "Département"
+        elif "Usage" in col:
+            usage_cols.append(col)  # Ajouter les colonnes "Techno"
+
 
     # Convertir Oui/Non → 1/0
     data = fichier_csv[[reg_col] + usage_cols].replace({"Oui": 1, "Non": 0}).fillna(0)
@@ -31,5 +38,4 @@ def diagramme_usage_par_reg():
 
 # Appel de la fonction
 diagramme_usage_par_reg()
-
 
