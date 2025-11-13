@@ -1,13 +1,25 @@
+import pandas as pd
 import matplotlib.pyplot as plt
 
-def digramme_circulaire(bande_freq, nombre_feq):
-    
-    plt.pie(nombre_feq, labels=bande_freq, autopct='%1.f%%', counterclock=False, startangle=105)
-    plt.title("Répartition des expérimentations par bande de fréquence en GHz")
+def diagramme_circulaire():
+    fichier_csv=pd.read_csv(r"C:/Users/roubaabd/Downloads/experimentations_5G.csv", encoding="Windows-1252", sep=";", engine="python")
+    fichier_csv.head()
+
+    bande_counts = fichier_csv['Bande de fréquences'].value_counts()
+
+    # Diagramme circulaire automatique
+    plt.figure(figsize=(7,7))
+    plt.pie(
+        bande_counts.values,                # valeurs à tracer
+        labels=bande_counts.index,          # noms des bandes
+        autopct='%1.1f%%',                  # pourcentage formaté
+        startangle=105,
+        counterclock=False
+    )
+    plt.title("Répartition des expérimentations par bande de fréquence (GHz)")
     plt.show()
-    
-digramme_circulaire([2.6, 3.8, 26], [33, 80, 3])
-    
+
+diagramme_circulaire()
 
 
 
