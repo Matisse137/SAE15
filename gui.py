@@ -2,6 +2,11 @@ import tkinter as tk
 from tkinter import ttk
 from PIL import Image, ImageTk  # pour insérer une image
 
+def empty():
+    return
+
+# Les fonctions qui suivent utilisent tkinter,
+# elles servent à ajouter les éléments
 def init_window(title, size):
     """
     Parameters
@@ -70,11 +75,19 @@ def add_img(window, file_name, anchor_, size_x, size_y, x, y, pad_x, pad_y):
     canvas.image = tk_image
     return canvas
 
+# Les fonctions qui suivent seront les actions de chaques boutons
+def btn_1():
+    return 
 
 def launch_window():
     window, frame = init_window_frame("Analyse CSV", "960x540")
-    add_label(frame, "Texte de test", 0, 0, 2, 2)
-    add_button(frame, "Quitter", window.destroy, 1, 0, 2, 2)
+    add_button(frame, "Expérimentations par départements", empty, 0, 0, 2, 2)
+    add_button(frame, "Expérimentations par bandes de fréquences", empty, 0, 1, 2, 2)
+    add_button(frame, "Technologie par départements", empty, 0, 2, 2, 2)
+    add_button(frame, "Technologie par régions", empty, 0, 3, 2, 2)
+    add_button(frame, "Usage par départements", empty, 1, 0, 2, 2)
+    add_button(frame, "Usage par régions", empty, 1, 1, 2, 2)
+    add_button(frame, "Présence de technologies par régions", empty, 1, 2, 2, 2)
     window.mainloop()
 
 launch_window()
