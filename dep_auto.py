@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Charger les données
-fichier_csv = pd.read_csv(r"C:/Users/roubaabd/Downloads/experimentations_5G.csv", encoding="Windows-1252", sep=";", engine="python")
+fichier_csv = pd.read_csv(r"experimentations_5G.csv", encoding="Windows-1252", sep=";", engine="python")
 
 # Fonction pour afficher le graphique en barres horizontales
 def departement():
@@ -21,3 +21,4 @@ def departement():
     plt.show()
 
 departement()
+
