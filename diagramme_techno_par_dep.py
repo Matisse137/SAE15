@@ -7,8 +7,14 @@ def diagramme_techno_par_dep():
     fichier_csv = pd.read_csv(r"experimentations_5G.csv",encoding="Windows-1252", sep=";", engine="python")
 
     # Trouver les colonnes "Département" et "Techno"
-    dep_col = [col for col in fichier_csv.columns if "Département" in col][0]
-    techno_cols = [col for col in fichier_csv.columns if "Techno" in col]
+    dep_col = []
+    techno_cols = []
+    
+    for col in fichier_csv.columns:
+        if "Département" == col:
+            dep_col = col  # On assigne la colonne "Département"
+        elif "Techno" in col:
+            techno_cols.append(col)  # Ajouter les colonnes "Techno"
 
     # Convertir Oui/Non → 1/0
     data = fichier_csv[[dep_col] + techno_cols].replace({"Oui": 1, "Non": 0}).fillna(0)
@@ -34,4 +40,5 @@ diagramme_techno_par_dep()
 
 
     
+
 
