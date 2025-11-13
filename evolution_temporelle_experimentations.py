@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv(r"C:\Users\jaffrewe\Downloads\experimentations_5G.csv", sep=";", encoding="latin1")
+df = pd.read_csv(r"experimentations_5G.csv", sep=";", encoding="latin1")
 
 # Conversion de la colonne 'Début' en format date
 df["Début"] = pd.to_datetime(df["Début"], errors="coerce", dayfirst=True)
@@ -21,4 +21,5 @@ plt.ylabel("Nombre d’expérimentations lancées")
 plt.xticks(rotation=45)
 plt.grid(True, linestyle="--", alpha=0.6)
 plt.tight_layout()
+plt.savefig("evolution_temporelle_experimentations.png")
 plt.show()
