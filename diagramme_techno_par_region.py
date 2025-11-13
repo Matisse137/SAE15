@@ -23,12 +23,11 @@ def diagramme_techno_par_region():
     techno_par_region = data.groupby(region_col)[techno_cols].sum()
 
     # Créer un diagramme en barres empilées
-    techno_par_region.plot(kind="bar", stacked=True, figsize=(10, 6))
+    techno_par_region.plot(kind="bar", stacked=True, figsize=(12, 6))
 
     plt.title("Technologies 5G utilisées par région")
     plt.ylabel("Nombre d'expérimentations")
     plt.xlabel("Régions")
-    
     plt.xticks(rotation=45, ha="right")
     plt.legend(title="Technologies", bbox_to_anchor=(1.05, 1), loc="upper left")
     plt.tight_layout()
