@@ -7,14 +7,14 @@ def diagramme_techno_par_dep():
     fichier_csv = pd.read_csv(r"C:/Users/roubaabd/Downloads/experimentations_5G.csv",
                               encoding="Windows-1252", sep=";", engine="python")
 
-    # Trouver les colonnes "Région" et "Techno"
+    # Trouver les colonnes "Département" et "Techno"
     dep_col = [col for col in fichier_csv.columns if "Département" in col][0]
     techno_cols = [col for col in fichier_csv.columns if "Techno" in col]
 
     # Convertir Oui/Non → 1/0
     data = fichier_csv[[dep_col] + techno_cols].replace({"Oui": 1, "Non": 0}).fillna(0)
 
-    # Regrouper par région et sommer les 1
+    # Regrouper par département et sommer les 1
     techno_par_dep = data.groupby(dep_col)[techno_cols].sum()
 
     # Créer un diagramme en barres empilées
@@ -31,6 +31,7 @@ def diagramme_techno_par_dep():
 
 # Appel de la fonction
 diagramme_techno_par_dep()
+
 
 
     
