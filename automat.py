@@ -3,8 +3,7 @@ import matplotlib.pyplot as plt
 
 def diagramme_techno():
    
-    fichier_csv = pd.read_csv(r"C:/Users/roubaabd/Downloads/experimentations_5G.csv",
-                              encoding="Windows-1252", sep=";", engine="python")
+    fichier_csv = pd.read_csv(r"experimentations_5G.csv", encoding="Windows-1252", sep=";", engine="python")
 
     techno_cols = [col for col in fichier_csv.columns if "Techno" in col]
     data = fichier_csv[techno_cols].replace({"Oui": 1, "Non": 0}).fillna(0)
@@ -24,3 +23,4 @@ def diagramme_techno():
 
 # Appel de la fonction
 diagramme_techno()
+
