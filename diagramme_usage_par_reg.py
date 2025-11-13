@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 def diagramme_usage_par_reg():
 
     # Charger le fichier CSV
-    fichier_csv = pd.read_csv(r"C:/Users/roubaabd/Downloads/experimentations_5G.csv",encoding="Windows-1252", sep=";", engine="python")
+    fichier_csv = pd.read_csv(r"experimentations_5G.csv",encoding="Windows-1252", sep=";", engine="python")
     fichier_csv.head()
     
     # Trouver les colonnes "Région" et "Techno"
@@ -31,4 +31,5 @@ def diagramme_usage_par_reg():
 
 # Appel de la fonction
 diagramme_usage_par_reg()
+
 
