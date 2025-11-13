@@ -8,26 +8,20 @@ df.head()
 
 def usage():
     
-    counts =[]
-    usages = [
-            "Usage - Mobilité connectée",
-            "Usage - Internet des objets",
-            "Usage - Ville intelligente",
-            "Usage - Réalité virtuelle",
-            "Usage - Télémédecine",
-            "Usage - Industrie du futur",
-            "Usage - Autre"
-            ]
+    counts = []
+    usages = []
+    
+    usages = df.filter(regex='^Usage').columns.tolist()
     
     for col in usages:
         if col in df.columns:
-            quantitede1 = df[col].value_counts().get(1)
-            counts.append(int((quantitede1*100)/len(df)))
+            quantite = df[col].value_counts().get(1)
+            counts.append(int((quantite*100)/len(df)))
         else:
             pass
     
 
-    print(counts)
+    #print(counts)
     x = np.array(usages)
     y = np.array(counts)
     
@@ -39,7 +33,7 @@ def usage():
     plt.xticks(rotation=45, ha="right")
     plt.tight_layout()
     plt.show()
-    print(x, y)
+    #print(x, y)
     
     plt.show()
     
