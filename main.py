@@ -8,6 +8,9 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import numpy as np
 
+fichier = pd.read_csv(r"C:\Users\delafcl4\Documents\experimentations_5G.csv", encoding="Windows-1252", sep=";", engine="python")
+fichier.head()
+
 #Variable global
 line_list = [{}] # Cette ligne repertorie toutes les lignes du csv sous forme de dictionnaire
 format_list = [        # Cette liste repertorie les differentes cles d'une ligne pour les dictionnaire au dessus
