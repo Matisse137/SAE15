@@ -16,6 +16,7 @@ def frequence_region():
     plt.ylabel("Fréquence")
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
+    plt.savefig("diagramme_a_barre_region.png")
     plt.show()
     
 frequence_region () 
