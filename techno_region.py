@@ -28,7 +28,9 @@ def diagramme_techno():
     plt.xticks(rotation=45, ha="right")
     plt.legend()
     plt.tight_layout()
+   plt.savefig("techno_region.png")
     plt.show()
 
 # Appel de la fonction
 diagramme_techno()
+
