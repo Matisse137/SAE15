@@ -29,6 +29,7 @@ def graphe(acteurs, valeurs):
     plt.ylabel("Nombre d'expérimentations")
     plt.xticks(rotation=0, ha='right')
     plt.tight_layout()
+    plt.savefig("nombre_temporelle_experimentations")
     plt.show()
     
 compteur = graphique_experimentations_par_acteur(df)
