@@ -32,6 +32,7 @@ def usage():
     plt.xlabel("Nombre de test réaliser")
     plt.xticks(rotation=45, ha="right")
     plt.tight_layout()
+    plt.savefig("diagramme_usage.png")
     plt.show()
     #print(x, y)
     
