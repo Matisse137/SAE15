@@ -17,9 +17,11 @@ def diagramme_circulaire():
         counterclock=False
     )
     plt.title("Répartition des expérimentations par bande de fréquence (GHz)")
+    plt.savefig("diagramme_circulaire.png")
     plt.show()
 
 diagramme_circulaire()
+
 
 
 
