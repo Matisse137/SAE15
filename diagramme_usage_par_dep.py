@@ -33,8 +33,10 @@ def diagramme_usage_par_dep():
     plt.xticks(rotation=45, ha="right")
     plt.legend(title="Technologies", bbox_to_anchor=(1.05, 1), loc="upper left")
     plt.tight_layout()
+    plt.savefig("diagramme_usage_par_departement".png")
     plt.show()
 
 # Appel de la fonction
 diagramme_usage_par_dep()
+
 
