@@ -1,143 +1,215 @@
-#Inclusion des modules
-import tkinter as tk 
+import tkinter as tk
 from tkinter import ttk
-from tkinter import messagebox
-# import folium as fl
+import webbrowser
+from PIL import Image, ImageTk  # pour insérer une image
+import folium
 import pandas as pd
-import matplotlib.pyplot as plt
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-import numpy as np
+import os
 
-fichier = pd.read_csv(r"C:\Users\delafcl4\Documents\experimentations_5G.csv", encoding="Windows-1252", sep=";", engine="python")
-fichier.head()
-
-#Variable global
-line_list = [{}] # Cette ligne repertorie toutes les lignes du csv sous forme de dictionnaire
-format_list = [        # Cette liste repertorie les differentes cles d'une ligne pour les dictionnaire au dessus
-    "experimentateur",
-    "bande_frequence",
-    "frequence_basses",
-    "frequence_haute",
-    "nombre_autorisation",
-    "lien_autorisation",
-    "latitude",
-    "longitude",
-    "code_insee",
-    "commune",
-    "departement",
-    "region",
-    "debut",
-    "fin",
-    "descritpion",
-    "techno_mimo",
-    "techno_beamforming",
-    "techno_duplexage",
-    "techno_nsa",
-    "techno_sa",
-    "techno_synchro",
-    "techno_slicing",
-    "techno_small_cell",
-    "techno_acces_dynamique",
-    "techno_mobilite",
-    "techno_iot",
-    "techno_ville_intelligente",
-    "techno_realite_virtuelle",
-    "techno_telemedecine",
-    "techno_industrie",
-    "techno_rercherche_developpement",
-    "techno_autre",
-    ]
-
-def build_line( experimenter, frenquency, low_frenquency, 
-        high_frequency, autorisation_nb, autorisation_link,
-        latitude, longitude, insee_code, 
-        area, department, country,
-        date_begin, date_end, description, 
-        t_mimo, t_beam, t_time_multiplexing,
-        t_nsa, t_sa, t_synchro,
-        t_slicing, t_small_cells, t_dynamic_spectrum,
-        t_mobility, t_objets, t_smart_cities,
-        t_virtual_reality, t_medical, t_industry,
-        t_technic, t_other):
+def launch_folium(file_name):
+    # Créer une carte
+    carte = folium.Map(location=[48.8566, 2.3522], zoom_start=12)
     
-    """
-        Cette fonction sert à créer une list qui sera rentrée en argument
-        de la fonction "add_line".
-        
-        Les parametres de cette fonctions sont les differents champs du csv du fichier "Exp5G-Formats.pdf"
-        
-    """
-    return ( experimenter, frenquency, low_frenquency, 
-            high_frequency, autorisation_nb, autorisation_link,
-            latitude, longitude, insee_code, 
-            area, department, country,
-            date_begin, date_end, description, 
-            t_mimo, t_beam, t_time_multiplexing,
-            t_nsa, t_sa, t_synchro,
-            t_slicing, t_small_cells, t_dynamic_spectrum,
-            t_mobility, t_objets, t_smart_cities,
-            t_virtual_reality, t_medical, t_industry,
-            t_technic, t_other)
-
-def add_line(line):
-    """
-    Parameters
-    ----------
-    line : list ou tuple
-        line est la list qui sert à etre enregsitree dans la liste des enregistrements
-        
-    Cette fonction ajoute un enregistrement à la liste des lignes du fichier csv
-
-    """
-    res = {}
+    # Enregistrer dans un fichier HTML
+    fichier = "carte_interactive.html"
+    carte.save(fichier)
     
-    for i, format_elt in enumerate(format_list):
-        res[format_elt] = line[i]
-        
-    line_list.append(res)
+    # Charger le fichier CSV
+    df = pd.read_csv(rf"{file_name}", encoding="Windows-1252", sep=";", engine="python")
+    df.head()
     
-def search_by(name, value):
+    carte = folium.Map(location=[48.8566, 2.3522], zoom_start=12)
+    
+    for i in range(len(df)):
+        latitude, longitude, Bande_de_fréquences = df.loc[i, ["Latitude", "Longitude", "Bande de fréquences"]]
+        latitude = float(latitude.replace(',', '.'))
+        longitude = float(longitude.replace(',', '.'))
+        regions = df.loc[i, "Région"]
+        bande = df.loc[i, "Bande de fréquences"]
+        description = df.loc[i, "Description"]
+        numero_arcep = df.loc[i, "Numéro de la décision d'autorisation de l'Arcep"]
+    
+        # Créer le texte du popup en HTML
+        popup_text = f"""
+        <b>Région :</b> {regions}<br>
+        <b>Numéro ARCEP :</b> {numero_arcep}<br>
+        <b>Bande de fréquences :</b> {bande}<br>
+        <b>Description :</b> {description}
+        """
+    
+        # Ajouter le marqueur
+        folium.Marker(
+            location=[latitude, longitude],
+            tooltip="Cliquer pour plus d'infos",  
+            popup=popup_text  # affiché au clic
+        ).add_to(carte)
+    
+    carte.save("carte_interactive.html")
+
+def empty():
+    return
+
+# variable globales qui peuvent êtres accedées partout dans le code
+global_window = None
+global_top_frame = None
+global_bottom_frame = None
+global_file_entry = None
+
+# Les fonctions qui suivent utilisent tkinter,
+# elles servent à ajouter les éléments
+
+def init_window_frame(title, size):
     """
-    Parameters
-    ----------
-    name : str
-        nom du champs recherche
-    value : str
-        nom recherche dans les enregistrements
-        
-    Cette fonction recherche les enregistrements qui contiennent un element en particulier
+    Crée une fenêtre principale avec un frame interne.
 
     Returns
     -------
-    res : list
-        liste des indices des enregistrements qui contiennent le champs demande
-
+    window : tk.Tk()
+        renvoie l'objet fenêtre.
+    frame : ttk.Frame()
+        renvoie le frame associé à la fenêtre.
     """
-    res = []
-    for i, elt in enumerate(line_list):
-        if(elt[name] == value):
-            res.append(i)
-    return res
+    global global_window
+    global global_top_frame
+    global global_bottom_frame
+    global global_file_entry
+    
+    window = tk.Tk() 
+    window.title(title) 
+    window.geometry(size)
+    
+    top_frame = ttk.Frame(window)
+    top_frame.grid(row=0)
+    bottom_frame = ttk.Frame(window)
+    bottom_frame.grid(row=1)
+    
+    global_window = window
+    global_top_frame = top_frame
+    global_bottom_frame = bottom_frame
+    
+    add_label(top_frame, "Veuillez entrer le nom du fichier CSV : ", 0, 0, 1, 0)
+    global_file_entry = add_entry(top_frame, 0, 1, 1, 0)
+    add_button(top_frame, "valider", btn_file, 1, 1, 2, 2)
 
-def occurrence(name, value):
-    """
-    Parameters
-    ----------
-    name : str
-        nom du champs recherche
-    value : str
-        nom recherche dans les enregistrements
+def flush(frame):
+    for widget in frame.winfo_children():
+        widget.destroy()
+
+def add_label(frame, txt, x, y, pad_x, pad_y):
+    label = ttk.Label(frame, text=txt)
+    label.grid(row=x, column=y, padx=pad_x, pady=pad_y)
+    
+    return label
+
+def add_button(frame, txt, func, x, y, pad_x, pad_y):
+    button = ttk.Button(frame, text=txt, command=func)
+    button.grid(row=x, column=y, padx=pad_x, pady=pad_y)
+    
+    return button
+
+
+def add_entry(frame, x, y, pad_x, pad_y):
+    entry = ttk.Entry(frame)
+    entry.grid(row=x, column=y, padx=pad_x, pady=pad_y)
+    
+    return entry
+
+
+def add_img(file_name, anchor_, size_x, size_y, x, y, pad_x, pad_y):
+    global global_bottom_frame
+    
+    flush(global_bottom_frame)
+    
+    img = Image.open(file_name)
+    img = img.resize((size_x, size_y))
+    tk_image = ImageTk.PhotoImage(img)
+
+    canvas = tk.Canvas(global_bottom_frame, width=size_x, height=size_y)
+    canvas.grid(row=x, column=y, padx=pad_x, pady=pad_y)
+    canvas.create_image(0, 0, image=tk_image, anchor=anchor_)
+    
+    canvas.image = tk_image
+    return canvas
+
+# Les fonctions qui suivent seront les actions de chaques boutons
+def btn_file():
+    global global_top_frame
+    global global_file_entry
+    
+    file_name = global_file_entry.get()
+    
+    if not os.path.isfile(file_name) or not file_name.lower().endswith(".csv"):
+        error_case("Le fichier n'existe pas ou n'est pas un CSV valide.")
+        return
+    
+    try:
+        # Vérifie que pandas peut le lire
+        pd.read_csv(file_name, sep=";", encoding="Windows-1252", engine="python")
+    except Exception as e:
+        error_case(f"Erreur lors de la lecture du CSV : {str(e)}")
+        return
         
-    Cherche le nombre de fois qu'une valeur est trouvée dans unn certain champs
+    add_button(global_top_frame, "Expérimentations par départements", btn_1, 0, 0, 2, 2)
+    add_button(global_top_frame, "Expérimentations par bandes de fréquences", btn_2, 0, 1, 2, 2)
+    add_button(global_top_frame, "Technologie par départements", btn_3, 0, 2, 2, 2)
+    add_button(global_top_frame, "Technologie par régions", btn_4, 0, 3, 2, 2)
+    add_button(global_top_frame, "Usage par départements", btn_5, 1, 0, 2, 2)
+    add_button(global_top_frame, "Usage par régions", btn_6, 1, 1, 2, 2)
+    add_button(global_top_frame, "Présence de technologies par régions", btn_7, 1, 2, 2, 2)
+    add_button(global_top_frame, "Ouvrir la carte interactive", btn_8, 1, 3, 2, 2)
+        
+    
+def btn_1():
+    # add_img(frame, file_name, anchor_, size_x, size_y, x, y, pad_x, pad_y)
+    return
 
-    Returns
-    -------
-    occur : int
-        nombre d'occurences
+def btn_2():
+    
+    return 
 
-    """
-    occur = 0
-    for elt in line_list:
-        if(elt[name] == value):
-            occur += 1
-    return occur
+def btn_3():
+    
+    return 
+
+def btn_4():
+    
+    return 
+
+def btn_5():
+    
+    return
+
+def btn_6():
+    
+    return 
+
+def btn_7():
+    
+    return
+
+def btn_8():
+    webbrowser.open("carte_interactive.html")
+    return
+
+# Fonction de lancement de la fenêtre
+def error_case(txt):
+    global global_bottom_frame
+    global global_top_frame
+    global global_window
+    
+    flush(global_bottom_frame)
+    flush(global_top_frame)
+    
+    
+    
+    add_label(global_window, txt, 0, 0, 0, 0)
+    add_label(global_window, "Veuillez relancer l'application, en corrigeant les erreurs.", 0, 1, 0, 0)
+
+def launch_window():
+    global global_window
+    
+    init_window_frame("Analyse CSV", "960x540")
+    
+    global_window.mainloop()
+
+launch_window()
