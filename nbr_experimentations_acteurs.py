@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv(r"C:\Users\jaffrewe\Downloads\experimentations_5G.csv", sep=";", encoding="latin1")
+df = pd.read_csv(r"experimentations_5G.csv", sep=";", encoding="latin1")
 
 def graphique_experimentations_par_acteur(df):
     compteur = {}
