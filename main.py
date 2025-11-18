@@ -81,13 +81,9 @@ def diagramme_techno():
 def departement():
     
     fichier_csv = df
-    # Comptage des occurrences par département
     departement_counts = fichier_csv['Département'].value_counts()
-
-    # Création du graphique en barres horizontales
     departement_counts.plot.barh()
 
-    # Personnalisation du graphique
     plt.ylabel("Département")
     plt.xlabel("Nombre d'expérimentations")
     plt.title("Répartition des expérimentations par département")
@@ -96,16 +92,14 @@ def departement():
     
 def diagramme_circulaire():
     fichier_csv = df
-    fichier_csv.head()
 
     bande_counts = fichier_csv['Bande de fréquences'].value_counts()
 
-    # Diagramme circulaire automatique
     plt.figure(figsize=(7,7))
     plt.pie(
-        bande_counts.values,                # valeurs à tracer
-        labels=bande_counts.index,          # noms des bandes
-        autopct='%1.1f%%',                  # pourcentage formaté
+        bande_counts.values,
+        labels=bande_counts.index,
+        autopct='%1.1f%%',
         startangle=105,
         counterclock=False
     )
@@ -115,26 +109,21 @@ def diagramme_circulaire():
     
 def diagramme_techno_par_dep():
 
-    # Charger le fichier CSV
     fichier_csv = df
 
-    # Trouver les colonnes "Département" et "Techno"
     dep_col = []
     techno_cols = []
     
     for col in fichier_csv.columns:
         if "Département" == col:
-            dep_col = col  # On assigne la colonne "Département"
+            dep_col = col
         elif "Techno" in col:
-            techno_cols.append(col)  # Ajouter les colonnes "Techno"
+            techno_cols.append(col)
 
-    # Convertir Oui/Non → 1/0
     data = fichier_csv[[dep_col] + techno_cols].replace({"Oui": 1, "Non": 0}).fillna(0)
 
-    # Regrouper par département et sommer les 1
     techno_par_dep = data.groupby(dep_col)[techno_cols].sum()
 
-    # Créer un diagramme en barres empilées
     techno_par_dep.plot(kind="bar", stacked=True, figsize=(14, 6))
 
     plt.title("Technologies 5G utilisées par département")
@@ -147,62 +136,53 @@ def diagramme_techno_par_dep():
     plt.savefig("diagramme_techno_par_dep.png")
     plt.close()
     
-def diagramme_techno_par_region():
-
-    # Charger le fichier CSV
+def diagramme_techno_region():
+   
     fichier_csv = df
 
-    # Trouver les colonnes "Région" et "Techno"
-    region_col = []
     techno_cols = []
+    region_col = []
     
     for col in fichier_csv.columns:
-        if "Région" == col:
-            region_col = col  # On assigne la colonne "Département"
-        elif "Techno" in col:
-            techno_cols.append(col)  # Ajouter les colonnes "Techno"
+        if "Région" in col:
+            region_col = col
+        if "Techno" in col:
+            techno_cols.append(col)
+       
+    data = fichier_csv[techno_cols].replace({"Oui": 1, "Non": 0}).fillna(0)
 
-    # Convertir Oui/Non → 1/0
-    data = fichier_csv[[region_col] + techno_cols].replace({"Oui": 1, "Non": 0}).fillna(0)
+    nb_1 = data.sum()
+    nb_0 = len(data) - nb_1
 
-    # Regrouper par région et sommer les 1
-    techno_par_region = data.groupby(region_col)[techno_cols].sum()
+    plt.figure(figsize=(10, 5))
+    plt.bar(techno_cols, nb_1, label="1 (Présence)", color="skyblue")
+    plt.bar(techno_cols, nb_0, bottom=nb_1, label="0 (Absence)", color="lightcoral")
 
-    # Créer un diagramme en barres empilées
-    techno_par_region.plot(kind="bar", stacked=True, figsize=(12, 6))
-
-    plt.title("Technologies 5G utilisées par région")
-    plt.ylabel("Nombre d'expérimentations")
-    plt.xlabel("Régions")
+    plt.title("Réparation des technologies 5G par type de Techno (région)")
     plt.xticks(rotation=45, ha="right")
-    plt.legend(title="Technologies", bbox_to_anchor=(1.05, 1), loc="upper left")
+    plt.legend()
     plt.tight_layout()
-    plt.savefig("diagramme_techno_par_region.png")
+    plt.savefig("techno_region.png")
     plt.close()
+
     
 def diagramme_usage_par_dep():
 
-    # Charger le fichier CSV
     fichier_csv = df
-    fichier_csv.head()
     
-    # Trouver les colonnes "Région" et "Techno"
     dep_col = []
     usage_cols = []
     
     for col in fichier_csv.columns:
         if "Département" == col:
-            dep_col = col  # On assigne la colonne "Département"
+            dep_col = col
         elif "Usage" in col:
-            usage_cols.append(col)  # Ajouter les colonnes "Techno"
+            usage_cols.append(col)
 
-    # Convertir Oui/Non → 1/0
     data = fichier_csv[[dep_col] + usage_cols].replace({"Oui": 1, "Non": 0}).fillna(0)
 
-    # Regrouper par région et sommer les 1
     usage_par_dep = data.groupby(dep_col)[usage_cols].sum()
 
-    # Créer un diagramme en barres empilées
     usage_par_dep.plot(kind="bar", stacked=True, figsize=(14, 8))
 
     plt.title("Usage 5G utilisées par département")
@@ -217,28 +197,22 @@ def diagramme_usage_par_dep():
     
 def diagramme_usage_par_reg():
 
-    # Charger le fichier CSV
     fichier_csv = df
-    fichier_csv.head()
     
-    # Trouver les colonnes "Région" et "Techno"
     reg_col = []
     usage_cols = []
     
     for col in fichier_csv.columns:
         if "Région" == col:
-            reg_col = col  # On assigne la colonne "Département"
+            reg_col = col
         elif "Usage" in col:
-            usage_cols.append(col)  # Ajouter les colonnes "Techno"
+            usage_cols.append(col)
 
 
-    # Convertir Oui/Non → 1/0
     data = fichier_csv[[reg_col] + usage_cols].replace({"Oui": 1, "Non": 0}).fillna(0)
 
-    # Regrouper par région et sommer les 1
     usage_par_reg = data.groupby(reg_col)[usage_cols].sum()
 
-    # Créer un diagramme en barres empilées
     usage_par_reg.plot(kind="bar", stacked=True, figsize=(14, 8))
 
     plt.title("Usage 5G utilisées par région")
@@ -277,50 +251,15 @@ def graphe(acteurs, valeurs):
     plt.ylabel("Nombre d'expérimentations")
     plt.xticks(rotation=0, ha='right')
     plt.tight_layout()
-    plt.savefig("nombre_temporelle_experimentations")
+    plt.savefig("nombre_temporelle_experimentations.png")  # FIX: ajout .png
     plt.close()
 
-def diagramme_techno():
-   
-    fichier_csv = df
-
-    techno_cols = []
-    region_col = []
-    
-    for col in fichier_csv.columns:
-        if "Région" in col:  # On cherche la colonne "Région"
-            region_col = col
-        if "Techno" in col:  # On cherche les colonnes "Techno"
-            techno_cols.append(col)  # On assigne la colonne "Département"
-       
-        
-    data = fichier_csv[techno_cols].replace({"Oui": 1, "Non": 0}).fillna(0)
-
-    nb_1 = data.sum()
-    nb_0 = len(data) - nb_1
-
-    plt.figure(figsize=(10, 5))
-    plt.bar(techno_cols, nb_1, label="1 (Présence)", color="skyblue")
-    plt.bar(techno_cols, nb_0, bottom=nb_1, label="0 (Absence)", color="lightcoral")
-
-    plt.title("Réparation des technologies 5G par type de Techno")
-    plt.xticks(rotation=45, ha="right")
-    plt.legend()
-    plt.tight_layout()
-    plt.savefig("techno_region.png")
-    plt.close()
     
 def tracer_evolution(df):
-    # Conversion de la colonne 'Début' en format date
     df["Début"] = pd.to_datetime(df["Début"], errors="coerce", dayfirst=True)
-
-    # Supprimer les lignes sans date valide
     df = df.dropna(subset=["Début"])
-
-    # Compter le nombre d’expérimentations par mois
     evolution = df["Début"].dt.to_period("M").value_counts().sort_index()
 
-    # Tracer le graphique
     plt.figure(figsize=(10,5))
     plt.plot(evolution.index.astype(str), evolution.values, marker='o', linestyle='-', color='royalblue')
     plt.title("Évolution temporelle des expérimentations 5G en France")
@@ -331,10 +270,9 @@ def tracer_evolution(df):
     plt.tight_layout()
     plt.savefig("evolution_temporelle_experimentations.png")
     plt.close()
-    return evolution  # facultatif
-
+    return evolution
     
-# Appel de toute les fonctions
+
 def launch_pyplot():
     frequence_region() 
     usage()
@@ -342,26 +280,21 @@ def launch_pyplot():
     departement()
     diagramme_circulaire()
     diagramme_techno_par_dep()
-    diagramme_techno_par_region()
+    diagramme_techno_region()
     diagramme_usage_par_dep()
     diagramme_usage_par_reg()
-    diagramme_techno()
+    diagramme_techno_region()
     compteur = graphique_experimentations_par_acteur(df)
     acteurs, valeurs = croissant(compteur)
     graphe(acteurs, valeurs)
     plt.close()
 
+
 def launch_folium(file_name):
-    # Créer une carte
     carte = folium.Map(location=[48.8566, 2.3522], zoom_start=12)
+    carte.save("carte_interactive.html")
     
-    # Enregistrer dans un fichier HTML
-    fichier = "carte_interactive.html"
-    carte.save(fichier)
-    
-    # Charger le fichier CSV
     df = pd.read_csv(rf"{file_name}", encoding="Windows-1252", sep=";", engine="python")
-    df.head()
     
     carte = folium.Map(location=[48.8566, 2.3522], zoom_start=12)
     
@@ -374,7 +307,6 @@ def launch_folium(file_name):
         description = df.loc[i, "Description"]
         numero_arcep = df.loc[i, "Numéro de la décision d'autorisation de l'Arcep"]
     
-        # Créer le texte du popup en HTML
         popup_text = f"""
         <b>Région :</b> {regions}<br>
         <b>Numéro ARCEP :</b> {numero_arcep}<br>
@@ -382,11 +314,10 @@ def launch_folium(file_name):
         <b>Description :</b> {description}
         """
     
-        # Ajouter le marqueur
         folium.Marker(
             location=[latitude, longitude],
-            tooltip="Cliquer pour plus d'infos",  
-            popup=popup_text  # affiché au clic
+            tooltip="Cliquer pour plus d'infos",
+            popup=popup_text
         ).add_to(carte)
     
     carte.save("carte_interactive.html")
@@ -394,26 +325,13 @@ def launch_folium(file_name):
 def empty():
     return
 
-# variable globales qui peuvent êtres accedées partout dans le code
 global_window = None
 global_top_frame = None
 global_bottom_frame = None
 global_file_entry = None
 
-# Les fonctions qui suivent utilisent tkinter,
-# elles servent à ajouter les éléments
-
 def init_window_frame(title, size):
-    """
-    Crée une fenêtre principale avec un frame interne.
 
-    Returns
-    -------
-    window : tk.Tk()
-        renvoie l'objet fenêtre.
-    frame : ttk.Frame()
-        renvoie le frame associé à la fenêtre.
-    """
     global global_window
     global global_top_frame
     global global_bottom_frame
@@ -443,22 +361,17 @@ def flush(frame):
 def add_label(frame, txt, x, y, pad_x, pad_y):
     label = ttk.Label(frame, text=txt)
     label.grid(row=x, column=y, padx=pad_x, pady=pad_y)
-    
     return label
 
 def add_button(frame, txt, func, x, y, pad_x, pad_y):
     button = ttk.Button(frame, text=txt, command=func)
     button.grid(row=x, column=y, padx=pad_x, pady=pad_y)
-    
     return button
-
 
 def add_entry(frame, x, y, pad_x, pad_y):
     entry = ttk.Entry(frame)
     entry.grid(row=x, column=y, padx=pad_x, pady=pad_y)
-    
     return entry
-
 
 def add_img(file_name, anchor_, size_x, size_y, x, y, pad_x, pad_y):
     global global_bottom_frame
@@ -476,7 +389,6 @@ def add_img(file_name, anchor_, size_x, size_y, x, y, pad_x, pad_y):
     canvas.image = tk_image
     return canvas
 
-# Les fonctions qui suivent seront les actions de chaques boutons
 def btn_file():
     global global_top_frame
     global global_file_entry
@@ -488,57 +400,71 @@ def btn_file():
         return
     
     try:
-        # Vérifie que pandas peut le lire
         pd.read_csv(file_name, sep=";", encoding="Windows-1252", engine="python")
     except Exception as e:
         error_case(f"Erreur lors de la lecture du CSV : {str(e)}")
         return
     
-    launch_pyplot()    
+    launch_pyplot()  
+    flush(global_top_frame)
     
-    add_button(global_top_frame, "Expérimentations par départements", btn_1, 0, 0, 2, 2)
-    add_button(global_top_frame, "Expérimentations par bandes de fréquences", btn_2, 0, 1, 2, 2)
-    add_button(global_top_frame, "Technologie par départements", btn_3, 0, 2, 2, 2)
-    add_button(global_top_frame, "Technologie par régions", btn_4, 0, 3, 2, 2)
-    add_button(global_top_frame, "Usage par départements", btn_5, 1, 0, 2, 2)
-    add_button(global_top_frame, "Usage par régions", btn_6, 1, 1, 2, 2)
-    add_button(global_top_frame, "Présence de technologies par régions", btn_7, 1, 2, 2, 2)
-    add_button(global_top_frame, "Ouvrir la carte interactive", btn_8, 1, 3, 2, 2)
-        
+    add_button(global_top_frame, "Régions", btn_region, 0, 0, 2, 2)
+    add_button(global_top_frame, "Départements", btn_dep, 0, 1, 2, 2)
+    add_button(global_top_frame, "Bandes de fréquences", btn_bandes, 0, 2, 2, 2)
+    add_button(global_top_frame, "Techno (global)", btn_techno_global, 0, 3, 2, 2)
     
-def btn_1():
-    add_img( "diagramme_techno.png", "nw", 800, 600, 0, 0, 0, 0)
-    return
-
-def btn_2():
+    add_button(global_top_frame, "Techno par départements", btn_techno_dep, 1, 0, 2, 2)
+    add_button(global_top_frame, "Techno par régions", btn_techno_reg, 1, 1, 2, 2)
+    add_button(global_top_frame, "Usage (global)", btn_usage_global, 1, 2, 2, 2)
+    add_button(global_top_frame, "Usage par départements", btn_usage_dep, 1, 3, 2, 2)
     
-    return 
-
-def btn_3():
+    add_button(global_top_frame, "Usage par régions", btn_usage_reg, 2, 0, 2, 2)
+    add_button(global_top_frame, "Techno régions (simplifiée)", btn_techno_region_simple, 2, 1, 2, 2)
+    add_button(global_top_frame, "Évolution temporelle", btn_evolution, 2, 2, 2, 2)
+    add_button(global_top_frame, "Expérimentations par acteur", btn_acteurs, 2, 3, 2, 2)
     
-    return 
+    add_button(global_top_frame, "Carte interactive", btn_map, 3, 0, 2, 2)
 
-def btn_4():
-    add_img( "diagramme_a_barre_region.png", "nw", 800, 600, 0, 0, 0, 0)
-    return 
 
-def btn_5():
-    
-    return
+def btn_region():
+    add_img("diagramme_a_barre_region.png", "nw", 800, 600, 0, 0, 0, 0)
 
-def btn_6():
-    add_img( "diagramme_usage.png", "nw", 800, 600, 0, 0, 0, 0)
-    return 
+def btn_dep():
+    add_img("diagramme_dep.png", "nw", 800, 600, 0, 0, 0, 0)
 
-def btn_7():
-    
-    return
+def btn_bandes():
+    add_img("diagramme_circulaire.png", "nw", 800, 600, 0, 0, 0, 0)
 
-def btn_8():
+def btn_techno_global():
+    add_img("diagramme_techno.png", "nw", 800, 600, 0, 0, 0, 0)
+
+def btn_techno_dep():
+    add_img("diagramme_techno_par_dep.png", "nw", 800, 600, 0, 0, 0, 0)
+
+def btn_techno_reg():
+    add_img("diagramme_techno_par_region.png", "nw", 800, 600, 0, 0, 0, 0)
+
+def btn_usage_global():
+    add_img("diagramme_usage.png", "nw", 800, 600, 0, 0, 0, 0)
+
+def btn_usage_dep():
+    add_img("diagramme_usage_par_departement.png", "nw", 800, 600, 0, 0, 0, 0)
+
+def btn_usage_reg():
+    add_img("diagramme_usage_par_region.png", "nw", 800, 600, 0, 0, 0, 0)
+
+def btn_techno_region_simple():
+    add_img("techno_region.png", "nw", 800, 600, 0, 0, 0, 0)
+
+def btn_evolution():
+    add_img("evolution_temporelle_experimentations.png", "nw", 800, 600, 0, 0, 0, 0)
+
+def btn_acteurs():
+    add_img("nombre_temporelle_experimentations.png", "nw", 800, 600, 0, 0, 0, 0)
+
+def btn_map():
     webbrowser.open("carte_interactive.html")
-    return
 
-# Fonction de lancement de la fenêtre
 def error_case(txt):
     global global_bottom_frame
     global global_top_frame
@@ -546,8 +472,6 @@ def error_case(txt):
     
     flush(global_bottom_frame)
     flush(global_top_frame)
-    
-    
     
     add_label(global_window, txt, 0, 0, 0, 0)
     add_label(global_window, "Veuillez relancer l'application, en corrigeant les erreurs.", 0, 1, 0, 0)
