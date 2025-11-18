@@ -1,11 +1,17 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import os 
 
+os.getcwd()
 def diagramme_techno():
    
     fichier_csv = pd.read_csv(r"experimentations_5G.csv", encoding="Windows-1252", sep=";", engine="python")
 
-    techno_cols = [col for col in fichier_csv.columns if "Techno" in col]
+    techno_cols = []
+    for col in fichier_csv.columns:
+        if "Techno" in col:
+            techno_cols.append(col)
+
     data = fichier_csv[techno_cols].replace({"Oui": 1, "Non": 0}).fillna(0)
 
     nb_1 = data.sum()
@@ -23,4 +29,3 @@ def diagramme_techno():
 
 # Appel de la fonction
 diagramme_techno()
-
