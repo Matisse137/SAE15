@@ -1,0 +1,4045 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_bfb7c27e368d944005cb2ec367f8e961 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_bfb7c27e368d944005cb2ec367f8e961" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_bfb7c27e368d944005cb2ec367f8e961 = L.map(
+                "map_bfb7c27e368d944005cb2ec367f8e961",
+                {
+                    center: [48.8566, 2.3522],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_30e7ab4e859ae6ed1810698b76b1a9e0 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_30e7ab4e859ae6ed1810698b76b1a9e0.addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+            var marker_8fb2ab4d7c415ea088902de3f73a76e6 = L.marker(
+                [47.2919444444444, -1.48444444444444],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_69331b9b405a78364697ae603097bc62 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_48785dfcf8e17f3fb2ede852a43d25f8 = $(`<div id="html_48785dfcf8e17f3fb2ede852a43d25f8" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Pays de la Loire<br>         <b>Numéro ARCEP :</b> 2022-1004<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> La SNCF explore avec son partenaire Stellantis les possibilités offertes par la Mobilité Autonome dans le cadre d'une des expérimentations du projet collaboratif SAM (Sécurité et Acceptabilité de la Mobilité autonome), financé par l'ADEME ( (Agence de l'Environnement et de la Maîtrise de l'Energie). Une plateforme d'innovation ouverte a ainsi été conçue à Carquefou sur une ancienne voie ferrée reconvertie pour y tester les briques technologiques et servicielles de futurs systèmes de transport public autonome.         </div>`)[0];
+                popup_69331b9b405a78364697ae603097bc62.setContent(html_48785dfcf8e17f3fb2ede852a43d25f8);
+            
+        
+
+        marker_8fb2ab4d7c415ea088902de3f73a76e6.bindPopup(popup_69331b9b405a78364697ae603097bc62)
+        ;
+
+        
+    
+    
+            marker_8fb2ab4d7c415ea088902de3f73a76e6.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3fb3bd84a9398b664df344c5dba6dece = L.marker(
+                [47.312245, -2.169842],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_9886f2a3445bc1bdf3a79e7327567603 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0615678798a2673c0f07c2f9fab55c1d = $(`<div id="html_0615678798a2673c0f07c2f9fab55c1d" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Pays de la Loire<br>         <b>Numéro ARCEP :</b> 2022-2388<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation de Airbus dans le cadre de sa transformation digitale, visant à développer son offre de connectivité sans fil dans le but d’assurer une continuité de service pour ses moyens de production en milieu industriel dit complexe (Hangar avec environment métallique dense).         </div>`)[0];
+                popup_9886f2a3445bc1bdf3a79e7327567603.setContent(html_0615678798a2673c0f07c2f9fab55c1d);
+            
+        
+
+        marker_3fb3bd84a9398b664df344c5dba6dece.bindPopup(popup_9886f2a3445bc1bdf3a79e7327567603)
+        ;
+
+        
+    
+    
+            marker_3fb3bd84a9398b664df344c5dba6dece.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9753478d122e4ee6eeb116465f40c620 = L.marker(
+                [48.785, 2.20827],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_e73593e1883703187e48aab2e606b856 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e66e73760b47cc53afd592b2b403da4 = $(`<div id="html_0e66e73760b47cc53afd592b2b403da4" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2023-0917<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_e73593e1883703187e48aab2e606b856.setContent(html_0e66e73760b47cc53afd592b2b403da4);
+            
+        
+
+        marker_9753478d122e4ee6eeb116465f40c620.bindPopup(popup_e73593e1883703187e48aab2e606b856)
+        ;
+
+        
+    
+    
+            marker_9753478d122e4ee6eeb116465f40c620.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fa5ab97586ffbe46ad73ebd3452d9289 = L.marker(
+                [48.5759425, 7.7430558],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_77eccfe4131299c986499fa7ddc288db = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cdc6fc78a643ee5e0ffc721385fba766 = $(`<div id="html_cdc6fc78a643ee5e0ffc721385fba766" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Grand Est<br>         <b>Numéro ARCEP :</b> 2022-2048<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation, dans le cadre du projet 5G-OR (Operating Room), visant à créer la nouvelle génération de blocs opératoires, pour des interventions mini-invasives personnalisées et sécurisées, avec l’objectif d’améliorer le bénéfice pour les patients.         </div>`)[0];
+                popup_77eccfe4131299c986499fa7ddc288db.setContent(html_cdc6fc78a643ee5e0ffc721385fba766);
+            
+        
+
+        marker_fa5ab97586ffbe46ad73ebd3452d9289.bindPopup(popup_77eccfe4131299c986499fa7ddc288db)
+        ;
+
+        
+    
+    
+            marker_fa5ab97586ffbe46ad73ebd3452d9289.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b87a3a0e7f5683def5b7d13dd3e7a812 = L.marker(
+                [48.8287222, 2.26152777],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_eddea8698ca8cda4a0c793ad66adbb49 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9758543a11887402daa09cc4a7b426c4 = $(`<div id="html_9758543a11887402daa09cc4a7b426c4" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2022-1955<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Capgemini, acteur des secteurs des technologies numériques et de l’industrie intelligente, enrichit son Lab 5G d’Issy-les-Moulineaux par de nouvelles capacités d’expérimentation dédiées aux cas d’usages de l’industrie du futur, complétant ainsi son réseau privé SA (Stand alone) par un nouveau spectre de fréquences n77.         </div>`)[0];
+                popup_eddea8698ca8cda4a0c793ad66adbb49.setContent(html_9758543a11887402daa09cc4a7b426c4);
+            
+        
+
+        marker_b87a3a0e7f5683def5b7d13dd3e7a812.bindPopup(popup_eddea8698ca8cda4a0c793ad66adbb49)
+        ;
+
+        
+    
+    
+            marker_b87a3a0e7f5683def5b7d13dd3e7a812.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f4ee7bf96cc92fd2944d7fba4fbb505c = L.marker(
+                [48.1357639, -1.6231722],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_5fea3b708b56ca6a677711cc438c884c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e07244c5634216cc70e7b9e0b64d0620 = $(`<div id="html_e07244c5634216cc70e7b9e0b64d0620" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Bretagne<br>         <b>Numéro ARCEP :</b> 2023-0718<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Plateforme d'expérimentation 5G, dédiée à des expérimentations techniques pour les solutions développées par B-Com et à destination des verticaux.         </div>`)[0];
+                popup_5fea3b708b56ca6a677711cc438c884c.setContent(html_e07244c5634216cc70e7b9e0b64d0620);
+            
+        
+
+        marker_f4ee7bf96cc92fd2944d7fba4fbb505c.bindPopup(popup_5fea3b708b56ca6a677711cc438c884c)
+        ;
+
+        
+    
+    
+            marker_f4ee7bf96cc92fd2944d7fba4fbb505c.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d266669a72f035e76f949e1620954c5b = L.marker(
+                [47.033952, 5.233182],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_7305c31e9f087110b3b351767849200d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_071b44e17922f8210cf77711baa5168d = $(`<div id="html_071b44e17922f8210cf77711baa5168d" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Bourgogne-Franche-Comté<br>         <b>Numéro ARCEP :</b> 2022-2234<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_7305c31e9f087110b3b351767849200d.setContent(html_071b44e17922f8210cf77711baa5168d);
+            
+        
+
+        marker_d266669a72f035e76f949e1620954c5b.bindPopup(popup_7305c31e9f087110b3b351767849200d)
+        ;
+
+        
+    
+    
+            marker_d266669a72f035e76f949e1620954c5b.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6ccc3a3fdb5bc2207f7aefed06853b32 = L.marker(
+                [48.061714, -1.380992],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_e7754260aa48ad6c2f18a07971b65766 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9caab8813121f2c059c32c77c4d9ccd3 = $(`<div id="html_9caab8813121f2c059c32c77c4d9ccd3" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Bretagne<br>         <b>Numéro ARCEP :</b> 2022-2235<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_e7754260aa48ad6c2f18a07971b65766.setContent(html_9caab8813121f2c059c32c77c4d9ccd3);
+            
+        
+
+        marker_6ccc3a3fdb5bc2207f7aefed06853b32.bindPopup(popup_e7754260aa48ad6c2f18a07971b65766)
+        ;
+
+        
+    
+    
+            marker_6ccc3a3fdb5bc2207f7aefed06853b32.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_558e7e668870576b1ce1774e7fb6300b = L.marker(
+                [48.1127194, -1.60555277],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_4b047a6e588d80d51e38bbf99c78ddec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4d4438fdcc7da0bb844802c9738fa8b4 = $(`<div id="html_4d4438fdcc7da0bb844802c9738fa8b4" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Bretagne<br>         <b>Numéro ARCEP :</b> 2022-2391<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_4b047a6e588d80d51e38bbf99c78ddec.setContent(html_4d4438fdcc7da0bb844802c9738fa8b4);
+            
+        
+
+        marker_558e7e668870576b1ce1774e7fb6300b.bindPopup(popup_4b047a6e588d80d51e38bbf99c78ddec)
+        ;
+
+        
+    
+    
+            marker_558e7e668870576b1ce1774e7fb6300b.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c91b6f67b823d07363cb8d735de19a5e = L.marker(
+                [48.785814, 2.044985],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_f954a60e4fc6fdd590050fa98a72f476 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9376d628ccf089c9b19f342a13ec9073 = $(`<div id="html_9376d628ccf089c9b19f342a13ec9073" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2022-2535<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_f954a60e4fc6fdd590050fa98a72f476.setContent(html_9376d628ccf089c9b19f342a13ec9073);
+            
+        
+
+        marker_c91b6f67b823d07363cb8d735de19a5e.bindPopup(popup_f954a60e4fc6fdd590050fa98a72f476)
+        ;
+
+        
+    
+    
+            marker_c91b6f67b823d07363cb8d735de19a5e.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0c9fb16d7238a534d4850f242f2b7682 = L.marker(
+                [48.470902, 2.0243],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_0235d95433fda0c6133893566ac1d206 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3492adcf105c1ae16373cc6be6439f6c = $(`<div id="html_3492adcf105c1ae16373cc6be6439f6c" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2022-2679<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_0235d95433fda0c6133893566ac1d206.setContent(html_3492adcf105c1ae16373cc6be6439f6c);
+            
+        
+
+        marker_0c9fb16d7238a534d4850f242f2b7682.bindPopup(popup_0235d95433fda0c6133893566ac1d206)
+        ;
+
+        
+    
+    
+            marker_0c9fb16d7238a534d4850f242f2b7682.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_205e88459d3b50535a2f01c3be40ac51 = L.marker(
+                [43.618619, 1.362169],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_421f26bfca10a73ab893c7ade4d78921 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_34f9507ffaa8a448796731de12cf5eef = $(`<div id="html_34f9507ffaa8a448796731de12cf5eef" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Occitanie<br>         <b>Numéro ARCEP :</b> 2023-0126<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre de la transformation digitale de la société Airbus afin d'offrir une connectivité sans fil dans le but d'assurer une continuité de service pour des moyens de production en milieu industriel.         </div>`)[0];
+                popup_421f26bfca10a73ab893c7ade4d78921.setContent(html_34f9507ffaa8a448796731de12cf5eef);
+            
+        
+
+        marker_205e88459d3b50535a2f01c3be40ac51.bindPopup(popup_421f26bfca10a73ab893c7ade4d78921)
+        ;
+
+        
+    
+    
+            marker_205e88459d3b50535a2f01c3be40ac51.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_719b8caae17cb7afc84e04ac65303ca8 = L.marker(
+                [48.635018, -0.955043],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_8b9422c9c77256cef644ffb8721b8c92 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c4f163067bef01667f24ca272e06550 = $(`<div id="html_3c4f163067bef01667f24ca272e06550" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Normandie<br>         <b>Numéro ARCEP :</b> 2022-2532<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation qui s'inscrit dans le projet Lab PCN 5G pour mettre en œuvre un réseau mobile privé . Evolutif, robuste et sécurisé, ce réseau tend vers une souveraineté technologique française. Il sera innovant et vise à minimiser l’impact carbone. La plateforme se veut un laboratoire d’usages 5G pour l’industrie.         </div>`)[0];
+                popup_8b9422c9c77256cef644ffb8721b8c92.setContent(html_3c4f163067bef01667f24ca272e06550);
+            
+        
+
+        marker_719b8caae17cb7afc84e04ac65303ca8.bindPopup(popup_8b9422c9c77256cef644ffb8721b8c92)
+        ;
+
+        
+    
+    
+            marker_719b8caae17cb7afc84e04ac65303ca8.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_67293e286e2233a1ca699d16e4ebb497 = L.marker(
+                [48.381431, -0.572283],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_9a4e358e2b1b2e8135c3ac99257e2563 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_999e9c1346278ce174f103fe8fc74c2a = $(`<div id="html_999e9c1346278ce174f103fe8fc74c2a" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Normandie<br>         <b>Numéro ARCEP :</b> 2022-2680<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Expérimentation qui s'inscrit dans le projet Lab PCN 5G pour mettre en œuvre un réseau mobile privé. Evolutif, robuste et sécurisé, ce réseau tend vers une souveraineté technologique française. Il sera innovant et vise à minimiser l’impact carbone. La plateforme se veut un laboratoire d’usages 5G pour l’industrie.         </div>`)[0];
+                popup_9a4e358e2b1b2e8135c3ac99257e2563.setContent(html_999e9c1346278ce174f103fe8fc74c2a);
+            
+        
+
+        marker_67293e286e2233a1ca699d16e4ebb497.bindPopup(popup_9a4e358e2b1b2e8135c3ac99257e2563)
+        ;
+
+        
+    
+    
+            marker_67293e286e2233a1ca699d16e4ebb497.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7e1504a4671a6fec5263c02d3f316a8f = L.marker(
+                [48.7284974, 1.9286383],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_a1128eb5348d7833ab98b0b70fbc6728 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7c8ded225bee38917a4bb65d7cd3a06a = $(`<div id="html_7c8ded225bee38917a4bb65d7cd3a06a" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2023-0740<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation pour promouvoir une agriculture connectée dans le cadre de programmes d'éducation et d'entrepreneuriat. Le déploiement de ce réseau privé 5G vise à démontrer comment l'amélioration de la connectivité, de la bande passante, de la latence et le contrôle sur les informations du réseau sera bénéfique pour le développement d’une agriculture plus durable, résiliente et productive.         </div>`)[0];
+                popup_a1128eb5348d7833ab98b0b70fbc6728.setContent(html_7c8ded225bee38917a4bb65d7cd3a06a);
+            
+        
+
+        marker_7e1504a4671a6fec5263c02d3f316a8f.bindPopup(popup_a1128eb5348d7833ab98b0b70fbc6728)
+        ;
+
+        
+    
+    
+            marker_7e1504a4671a6fec5263c02d3f316a8f.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_60859bf7fe373b35b893e8f171042629 = L.marker(
+                [48.7283333333333, 1.92861111111111],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_8ad66cf59622c973a3b8077cc31a923d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e828b702deaa914243d3aeac96a78ac4 = $(`<div id="html_e828b702deaa914243d3aeac96a78ac4" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2023-0716<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Expérimentation pour promouvoir une agriculture connectée dans le cadre de programmes d'éducation et d'entrepreneuriat. Le déploiement de ce réseau privé 5G vise à démontrer comment l'amélioration de la connectivité, de la bande passante, de la latence et le contrôle sur les informations du réseau sera bénéfique pour le développement d’une agriculture plus durable, résiliente et productive.         </div>`)[0];
+                popup_8ad66cf59622c973a3b8077cc31a923d.setContent(html_e828b702deaa914243d3aeac96a78ac4);
+            
+        
+
+        marker_60859bf7fe373b35b893e8f171042629.bindPopup(popup_8ad66cf59622c973a3b8077cc31a923d)
+        ;
+
+        
+    
+    
+            marker_60859bf7fe373b35b893e8f171042629.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_339f49a11b68d7f66e6daf2acbf4b0b8 = L.marker(
+                [43.6236111111111, 1.48777777777778],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_5ffc7747f3dacee415572c41f2f63caa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d6c1be42d3202183fa4fd89b9ba456ef = $(`<div id="html_d6c1be42d3202183fa4fd89b9ba456ef" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Occitanie<br>         <b>Numéro ARCEP :</b> 2023-0918<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_5ffc7747f3dacee415572c41f2f63caa.setContent(html_d6c1be42d3202183fa4fd89b9ba456ef);
+            
+        
+
+        marker_339f49a11b68d7f66e6daf2acbf4b0b8.bindPopup(popup_5ffc7747f3dacee415572c41f2f63caa)
+        ;
+
+        
+    
+    
+            marker_339f49a11b68d7f66e6daf2acbf4b0b8.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a7f349f04a2b794ac39cc818e3516262 = L.marker(
+                [45.7796714, 4.75074],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_c7ed19a7103ca29b9e0fcf9b4cfac3a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7487b33763a708972a2b4b79aca04e55 = $(`<div id="html_7487b33763a708972a2b4b79aca04e55" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Auvergne-Rhône-Alpes<br>         <b>Numéro ARCEP :</b> 2023-0919<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_c7ed19a7103ca29b9e0fcf9b4cfac3a2.setContent(html_7487b33763a708972a2b4b79aca04e55);
+            
+        
+
+        marker_a7f349f04a2b794ac39cc818e3516262.bindPopup(popup_c7ed19a7103ca29b9e0fcf9b4cfac3a2)
+        ;
+
+        
+    
+    
+            marker_a7f349f04a2b794ac39cc818e3516262.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_efe979e97e8ea6efe23955f16012a25b = L.marker(
+                [48.3413889, -1.18],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_c3231127b2615f931d54862a77e919d0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fd24f68f4c3d39bc428ebda6c9dedc8f = $(`<div id="html_fd24f68f4c3d39bc428ebda6c9dedc8f" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Bretagne<br>         <b>Numéro ARCEP :</b> 2023-0125<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_c3231127b2615f931d54862a77e919d0.setContent(html_fd24f68f4c3d39bc428ebda6c9dedc8f);
+            
+        
+
+        marker_efe979e97e8ea6efe23955f16012a25b.bindPopup(popup_c3231127b2615f931d54862a77e919d0)
+        ;
+
+        
+    
+    
+            marker_efe979e97e8ea6efe23955f16012a25b.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7a43acc1e4a6cbe39c9e2f6293885ef5 = L.marker(
+                [43.5634781, 1.46551944],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_d9bc8074fa51a5b0afaadc4de3e6f14d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f9c73722c646d6e5bd6f1267cbdade93 = $(`<div id="html_f9c73722c646d6e5bd6f1267cbdade93" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Occitanie<br>         <b>Numéro ARCEP :</b> 2023-0741<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Plateforme d'expérimentation autOCampus pour expérimenter les véhicules et connectés "in vivo". Les usagers sont les chercheurs des laboratoires, les formateurs et des industriels.         </div>`)[0];
+                popup_d9bc8074fa51a5b0afaadc4de3e6f14d.setContent(html_f9c73722c646d6e5bd6f1267cbdade93);
+            
+        
+
+        marker_7a43acc1e4a6cbe39c9e2f6293885ef5.bindPopup(popup_d9bc8074fa51a5b0afaadc4de3e6f14d)
+        ;
+
+        
+    
+    
+            marker_7a43acc1e4a6cbe39c9e2f6293885ef5.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3499b4821c80890c9539b18c29a2a3c1 = L.marker(
+                [45.64523, 5.871415],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_5d3af13af5f475b94233805fcb83ca41 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4a034c2937ec8c606c03f7792d7f3d11 = $(`<div id="html_4a034c2937ec8c606c03f7792d7f3d11" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Auvergne-Rhône-Alpes<br>         <b>Numéro ARCEP :</b> 2023-0719<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation pour tester et développer des cas d’usage 5G privés pour la sécurité en montagne.         </div>`)[0];
+                popup_5d3af13af5f475b94233805fcb83ca41.setContent(html_4a034c2937ec8c606c03f7792d7f3d11);
+            
+        
+
+        marker_3499b4821c80890c9539b18c29a2a3c1.bindPopup(popup_5d3af13af5f475b94233805fcb83ca41)
+        ;
+
+        
+    
+    
+            marker_3499b4821c80890c9539b18c29a2a3c1.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0b82e72b9e2ff1622fbcf61b7779f3fd = L.marker(
+                [48.8972222222222, 2.17],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_23467e4dd12c970ae8a6fb4077e1c8c7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_86415533e0f102da060dd13a22adaf65 = $(`<div id="html_86415533e0f102da060dd13a22adaf65" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2023-1220<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> En portant de nouveaux cas d’usage et en s’appuyant sur différentes fonctions techniques issues de l’écosystème 5G, la plateforme d’expérimentation d’EDF Lab Chatou vise à définir les modalités de migration des réseaux industriels cellulaires privés d’EDF vers la technologie 5G.         </div>`)[0];
+                popup_23467e4dd12c970ae8a6fb4077e1c8c7.setContent(html_86415533e0f102da060dd13a22adaf65);
+            
+        
+
+        marker_0b82e72b9e2ff1622fbcf61b7779f3fd.bindPopup(popup_23467e4dd12c970ae8a6fb4077e1c8c7)
+        ;
+
+        
+    
+    
+            marker_0b82e72b9e2ff1622fbcf61b7779f3fd.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6ac0fc4eafe1d1b444643a1ead7e477e = L.marker(
+                [48.8427139, 2.31978527],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_7a6876b4a2b8d2a875394b631978a205 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6d43456807f51b1dee3b14ab887061e6 = $(`<div id="html_6d43456807f51b1dee3b14ab887061e6" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2023-0127<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Démonstrateur pour les solutions de connectivité 5G SA (Stand alone) développées par Athonet.         </div>`)[0];
+                popup_7a6876b4a2b8d2a875394b631978a205.setContent(html_6d43456807f51b1dee3b14ab887061e6);
+            
+        
+
+        marker_6ac0fc4eafe1d1b444643a1ead7e477e.bindPopup(popup_7a6876b4a2b8d2a875394b631978a205)
+        ;
+
+        
+    
+    
+            marker_6ac0fc4eafe1d1b444643a1ead7e477e.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_795f1bddae7958b7261e9ffcf2b9994e = L.marker(
+                [48.503878, 2.191201],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_a32dca1f87e13aaa8ee7806c15e781e3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5184a8576b851b007094d158025b003a = $(`<div id="html_5184a8576b851b007094d158025b003a" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2023-0122<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Démonstrateur pour les solutions de connectivité 5G SA (Stand alone) développées par Athonet.         </div>`)[0];
+                popup_a32dca1f87e13aaa8ee7806c15e781e3.setContent(html_5184a8576b851b007094d158025b003a);
+            
+        
+
+        marker_795f1bddae7958b7261e9ffcf2b9994e.bindPopup(popup_a32dca1f87e13aaa8ee7806c15e781e3)
+        ;
+
+        
+    
+    
+            marker_795f1bddae7958b7261e9ffcf2b9994e.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_708453eb45b51652e04fb352a7e8001a = L.marker(
+                [48.471003, 2.053509],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_e612d5b9f81583ae922eb25ba87796cd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eb74ec3d1b819688909f805291de07c1 = $(`<div id="html_eb74ec3d1b819688909f805291de07c1" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2023-0123<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_e612d5b9f81583ae922eb25ba87796cd.setContent(html_eb74ec3d1b819688909f805291de07c1);
+            
+        
+
+        marker_708453eb45b51652e04fb352a7e8001a.bindPopup(popup_e612d5b9f81583ae922eb25ba87796cd)
+        ;
+
+        
+    
+    
+            marker_708453eb45b51652e04fb352a7e8001a.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_eae4540554ba5c675ca1dcf5e5478d5d = L.marker(
+                [48.1210356, -1.6954197],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_effa42898cd3939c9d7053bd316242d0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fcf7bfea62d491b38a3342e3e1d00361 = $(`<div id="html_fcf7bfea62d491b38a3342e3e1d00361" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Bretagne<br>         <b>Numéro ARCEP :</b> 2023-0742<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> L’objectif du projet « Engage 5G and beyond » est de construire et d’opérer un réseau de plateformes ouvertes, nationales et souveraines, offrant des services portés par la 5G pour l’expérimentation de cas d’usages orientés santé, énergie et industrie 4.0. Une offre de service permettra à des utilisateurs verticaux tiers (PMEs, start-up, laboratoires) de lancer leurs propres expérimentations appuyées sur la technologie 5G sur ces plateformes.Cette expérimentation se focalise sur le cas d’utilisation orienté santé.         </div>`)[0];
+                popup_effa42898cd3939c9d7053bd316242d0.setContent(html_fcf7bfea62d491b38a3342e3e1d00361);
+            
+        
+
+        marker_eae4540554ba5c675ca1dcf5e5478d5d.bindPopup(popup_effa42898cd3939c9d7053bd316242d0)
+        ;
+
+        
+    
+    
+            marker_eae4540554ba5c675ca1dcf5e5478d5d.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_26fa9d23da96504c95846873958a1594 = L.marker(
+                [43.4973889, 5.34205555],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_bd357599735223ad2e531d956f293221 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c04441e8de8dab58033d156ce3d1596a = $(`<div id="html_c04441e8de8dab58033d156ce3d1596a" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Provence-Alpes-Côte d'Azur<br>         <b>Numéro ARCEP :</b> 2023-0743<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_bd357599735223ad2e531d956f293221.setContent(html_c04441e8de8dab58033d156ce3d1596a);
+            
+        
+
+        marker_26fa9d23da96504c95846873958a1594.bindPopup(popup_bd357599735223ad2e531d956f293221)
+        ;
+
+        
+    
+    
+            marker_26fa9d23da96504c95846873958a1594.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c9ca1dfe7e63d4f93cc23b724f4e10ab = L.marker(
+                [48.7605555555556, -3.46722222222222],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_91a6e0531ea817428468127764738929 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_96fe455e08a790ef580bc0de6a3435bd = $(`<div id="html_96fe455e08a790ef580bc0de6a3435bd" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Bretagne<br>         <b>Numéro ARCEP :</b> 2023-1441<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation portant sur la connectivité 5G et fiabilité améliorée avec plusieurs cellules pour les cas d’utilisation verticaux de l’IoT industriel, optimisations RAN (Radio access network), y compris le contrôleur intelligent RAN et la planification intelligente.         </div>`)[0];
+                popup_91a6e0531ea817428468127764738929.setContent(html_96fe455e08a790ef580bc0de6a3435bd);
+            
+        
+
+        marker_c9ca1dfe7e63d4f93cc23b724f4e10ab.bindPopup(popup_91a6e0531ea817428468127764738929)
+        ;
+
+        
+    
+    
+            marker_c9ca1dfe7e63d4f93cc23b724f4e10ab.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3091388bdb4fb12f2606871486ba1839 = L.marker(
+                [48.8666666666667, 2.35666666666667],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_8208d1f60ea7a3c3d1168cd8c7d829ee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_32ecfaa3d65b8a250ec0e9dc20283f8a = $(`<div id="html_32ecfaa3d65b8a250ec0e9dc20283f8a" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2023-1193<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_8208d1f60ea7a3c3d1168cd8c7d829ee.setContent(html_32ecfaa3d65b8a250ec0e9dc20283f8a);
+            
+        
+
+        marker_3091388bdb4fb12f2606871486ba1839.bindPopup(popup_8208d1f60ea7a3c3d1168cd8c7d829ee)
+        ;
+
+        
+    
+    
+            marker_3091388bdb4fb12f2606871486ba1839.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f91a5b4cf9588d888229d6539021d761 = L.marker(
+                [48.7583333333333, -3.45611111111111],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_49c6b7539799c4240789d29796cb6c81 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4978179199926200f2726821ba6e0e7e = $(`<div id="html_4978179199926200f2726821ba6e0e7e" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Bretagne<br>         <b>Numéro ARCEP :</b> 2023-1525<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_49c6b7539799c4240789d29796cb6c81.setContent(html_4978179199926200f2726821ba6e0e7e);
+            
+        
+
+        marker_f91a5b4cf9588d888229d6539021d761.bindPopup(popup_49c6b7539799c4240789d29796cb6c81)
+        ;
+
+        
+    
+    
+            marker_f91a5b4cf9588d888229d6539021d761.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c9412ea78b1fa9f71730ae969851053e = L.marker(
+                [49.322500000000005, 6.093611111111111],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_459d0f726e1189651283406655b28ee6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a88804e0c4486ab65520193a2e22c3ac = $(`<div id="html_a88804e0c4486ab65520193a2e22c3ac" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Grand Est<br>         <b>Numéro ARCEP :</b> 2023-1442<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Plateforme partagée et dédiée à l'expérimentation multi-sites et multi-applications reposant sur des technologies 4G/5G dans le monde industriel sidérurgique.         </div>`)[0];
+                popup_459d0f726e1189651283406655b28ee6.setContent(html_a88804e0c4486ab65520193a2e22c3ac);
+            
+        
+
+        marker_c9412ea78b1fa9f71730ae969851053e.bindPopup(popup_459d0f726e1189651283406655b28ee6)
+        ;
+
+        
+    
+    
+            marker_c9412ea78b1fa9f71730ae969851053e.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0e2fd06acd150f9bc27f4850a0e664b7 = L.marker(
+                [48.8219444444444, 2.36861111111111],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_23af6edc219de081f501341c914c6176 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c09223ddf725d4b655fc5384a331bd68 = $(`<div id="html_c09223ddf725d4b655fc5384a331bd68" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2023-1400<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_23af6edc219de081f501341c914c6176.setContent(html_c09223ddf725d4b655fc5384a331bd68);
+            
+        
+
+        marker_0e2fd06acd150f9bc27f4850a0e664b7.bindPopup(popup_23af6edc219de081f501341c914c6176)
+        ;
+
+        
+    
+    
+            marker_0e2fd06acd150f9bc27f4850a0e664b7.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9619c3d3ee3dd38e04ec23937bb6d6ea = L.marker(
+                [43.5927777777778, 1.435],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_ed9340884893cacf7d0e5adb2bd237e2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_90e7d66666558cabceb9c47ea4db26c7 = $(`<div id="html_90e7d66666558cabceb9c47ea4db26c7" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Occitanie<br>         <b>Numéro ARCEP :</b> 2023-1573<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre du projet Hi5. Le projet Hi5 consiste en la mise en place d'une infrastruture de connectivité mobile s'appuyant sur la technologie 5G, mutualisée, multi-services, dédiée pour la métropole de Toulouse, et destinée à porter des cas d'usage autour de 5 axes : événementiel - culture - transport (nouvelles mobilités) - connectivité des sites (infrastructures publiques) - éducation.         </div>`)[0];
+                popup_ed9340884893cacf7d0e5adb2bd237e2.setContent(html_90e7d66666558cabceb9c47ea4db26c7);
+            
+        
+
+        marker_9619c3d3ee3dd38e04ec23937bb6d6ea.bindPopup(popup_ed9340884893cacf7d0e5adb2bd237e2)
+        ;
+
+        
+    
+    
+            marker_9619c3d3ee3dd38e04ec23937bb6d6ea.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6b5e6a31aef32df223e49ba7526df19d = L.marker(
+                [43.6094444444444, 1.39944444444444],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_2d78d317973feab010ca2a4b32024256 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e9c59ec83a4a70de8b6fe7fae7f63e3a = $(`<div id="html_e9c59ec83a4a70de8b6fe7fae7f63e3a" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Occitanie<br>         <b>Numéro ARCEP :</b> 2023-1874<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre du projet 5G Vertical ISS. Ce projet vise le développement et la validation en environnement client d'un cœur de réseau 5G "hybride" et vise à expérimenter en environnement hospitalier de nouveaux cas d'usage liés au maintien des services de téléphonie en situation de crise et à l'aide à la protection/localisation du personnel technique (Protection Travailleur Isolé). L'expérimentation doit aussi permettre de valider la pertinence d'une solution de mobilité entre le réseau privé déployé et le réseau MVNO porté par une infrastructure opérateur de réseau ouvert au public.         </div>`)[0];
+                popup_2d78d317973feab010ca2a4b32024256.setContent(html_e9c59ec83a4a70de8b6fe7fae7f63e3a);
+            
+        
+
+        marker_6b5e6a31aef32df223e49ba7526df19d.bindPopup(popup_2d78d317973feab010ca2a4b32024256)
+        ;
+
+        
+    
+    
+            marker_6b5e6a31aef32df223e49ba7526df19d.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ba084ccfa685102a3c036ee696de4507 = L.marker(
+                [49.0094444444444, 2.55916666666667],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_88ccd6b5aeeef0848fd90a3765e7583b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9fd6e0781fc49d91ea4e0a766d3b3df4 = $(`<div id="html_9fd6e0781fc49d91ea4e0a766d3b3df4" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2023-2294<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation sur les fonctionnalités différenciantes de la technologie 5G (latence, gestion de la QoS, souplesse des trames de synchro) afin de répondre aux besoins grandissant d'entreprises industrielles pouvant être regroupées au sein d'un campus.         </div>`)[0];
+                popup_88ccd6b5aeeef0848fd90a3765e7583b.setContent(html_9fd6e0781fc49d91ea4e0a766d3b3df4);
+            
+        
+
+        marker_ba084ccfa685102a3c036ee696de4507.bindPopup(popup_88ccd6b5aeeef0848fd90a3765e7583b)
+        ;
+
+        
+    
+    
+            marker_ba084ccfa685102a3c036ee696de4507.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d0079294f6af37aa77ec9adc9083d09d = L.marker(
+                [43.6386111111111, 1.555],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_d120450af52d17ec81054308105d6339 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e92a3752abeb25b31fe5d0b02efb093d = $(`<div id="html_e92a3752abeb25b31fe5d0b02efb093d" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Occitanie<br>         <b>Numéro ARCEP :</b> 2023-1744<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Expérimentation dans le cadre du projet Hi5. Le projet Hi5 consiste en la mise en place d'une infrastruture de connectivité mobile s'appuyant sur la technologie 5G, mutualisée, multi-services, dédiée pour la métropole de Toulouse, et destinée à porter des cas d'usage autour de 5 axes : événementiel - culture - transport (nouvelles mobilités) - connectivité des sites (infrastructures publiques) - éducation.         </div>`)[0];
+                popup_d120450af52d17ec81054308105d6339.setContent(html_e92a3752abeb25b31fe5d0b02efb093d);
+            
+        
+
+        marker_d0079294f6af37aa77ec9adc9083d09d.bindPopup(popup_d120450af52d17ec81054308105d6339)
+        ;
+
+        
+    
+    
+            marker_d0079294f6af37aa77ec9adc9083d09d.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_417ce5f273afc2793f90ad17961d98d1 = L.marker(
+                [45.7230555555556, 5.06944444444444],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_ba21f1df5787cac5553790265174551b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bf50a553bbf0ed365c718d82beec2b4b = $(`<div id="html_bf50a553bbf0ed365c718d82beec2b4b" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Auvergne-Rhône-Alpes<br>         <b>Numéro ARCEP :</b> 2023-1875<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation d'une solution de réseau 5G privé pour connecter des robots autonomes offrant un service de voiturier (sans laisser ses clés). En charge du stockage des véhicules, les robots optimisent l'usage de l'infrastructure.         </div>`)[0];
+                popup_ba21f1df5787cac5553790265174551b.setContent(html_bf50a553bbf0ed365c718d82beec2b4b);
+            
+        
+
+        marker_417ce5f273afc2793f90ad17961d98d1.bindPopup(popup_ba21f1df5787cac5553790265174551b)
+        ;
+
+        
+    
+    
+            marker_417ce5f273afc2793f90ad17961d98d1.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_27843084e094bfb9eecae037604697ce = L.marker(
+                [47.9858333333333, -1.74333333333333],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_1d79eef071206dec2446bd41ba2f65bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e7f8f8ed30a368dbb35bec6e6e92e17c = $(`<div id="html_e7f8f8ed30a368dbb35bec6e6e92e17c" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Bretagne<br>         <b>Numéro ARCEP :</b> 2023-1807<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Plateforme d'expérimentation 5G SA (Stand Alone) dans le cadre des travaux de la DGA-MI (Direction générale de l'armement - Maîtrise de l'information) liés aux systèmes de communication 5G souverains.         </div>`)[0];
+                popup_1d79eef071206dec2446bd41ba2f65bd.setContent(html_e7f8f8ed30a368dbb35bec6e6e92e17c);
+            
+        
+
+        marker_27843084e094bfb9eecae037604697ce.bindPopup(popup_1d79eef071206dec2446bd41ba2f65bd)
+        ;
+
+        
+    
+    
+            marker_27843084e094bfb9eecae037604697ce.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_16a1c77769972803e159a472a1d3bfd2 = L.marker(
+                [46.0747222222222, 6.57027777777778],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_9b8665b3025fddaeb9f729a01980918d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b4f14137ef72d5222733b688a3627f63 = $(`<div id="html_b4f14137ef72d5222733b688a3627f63" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Auvergne-Rhône-Alpes<br>         <b>Numéro ARCEP :</b> 2023-1957<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation pour soutenir, avancer, aider et sécuriser le déploiement de la 5G industrielle dans les ateliers de production manufacturiers. Cette expérimentation est l'un des principaux objectifs du Fablab 5G industrielle de Cluses, lauréat de l’AMI Campus Fablab 5G industrielle lancé par l’Etat.         </div>`)[0];
+                popup_9b8665b3025fddaeb9f729a01980918d.setContent(html_b4f14137ef72d5222733b688a3627f63);
+            
+        
+
+        marker_16a1c77769972803e159a472a1d3bfd2.bindPopup(popup_9b8665b3025fddaeb9f729a01980918d)
+        ;
+
+        
+    
+    
+            marker_16a1c77769972803e159a472a1d3bfd2.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f206871168d2e81707528f7756e8e966 = L.marker(
+                [47.4563888888889, -0.537777777777778],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_1d5aa6957363dfd555bb0d65484c2f47 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1a1132cafbe1d80ebdc1d4bce5e95a8f = $(`<div id="html_1a1132cafbe1d80ebdc1d4bce5e95a8f" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Pays de la Loire<br>         <b>Numéro ARCEP :</b> 2023-2108<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation menée dans le cadre du projet 5Green Mobilité qui a pour objectif d’activer différentes stratégies de régulation de la circulation en zone urbaine grâce à l’analyse de la qualité de l’air et du trafic, mais aussi de sensibiliser les populations urbaines aux comportements pro-environnementaux. L’ensemble des données sont collectées grâce à l’infrastructure 5G privée déployée.         </div>`)[0];
+                popup_1d5aa6957363dfd555bb0d65484c2f47.setContent(html_1a1132cafbe1d80ebdc1d4bce5e95a8f);
+            
+        
+
+        marker_f206871168d2e81707528f7756e8e966.bindPopup(popup_1d5aa6957363dfd555bb0d65484c2f47)
+        ;
+
+        
+    
+    
+            marker_f206871168d2e81707528f7756e8e966.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_14a3a7f295b676274258d4a6abad067d = L.marker(
+                [48.8972222222222, 2.17],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_ede012c8df6022ccce737b88f3b8042e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ccc1b86597c37f30f676652e3768faaf = $(`<div id="html_ccc1b86597c37f30f676652e3768faaf" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2023-1958<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Plateforme d’expérimentation d’EDF Lab Chatou qui vise à définir les modalités de migration des réseaux industriels cellulaires privés d’EDF vers la technologie 5G.         </div>`)[0];
+                popup_ede012c8df6022ccce737b88f3b8042e.setContent(html_ccc1b86597c37f30f676652e3768faaf);
+            
+        
+
+        marker_14a3a7f295b676274258d4a6abad067d.bindPopup(popup_ede012c8df6022ccce737b88f3b8042e)
+        ;
+
+        
+    
+    
+            marker_14a3a7f295b676274258d4a6abad067d.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0ed5d2204441f3078cf279a39991898f = L.marker(
+                [48.89722222222222, 2.17],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_96d247bbb960298151ef73404aa16bad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c9a4319373a57d22623dea56d49de31d = $(`<div id="html_c9a4319373a57d22623dea56d49de31d" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2024-1870<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> En portant de nouveaux cas d’usage et en s’appuyant sur différentes fonctions techniques issues de l’écosystème 5G, la plateforme d’expérimentation d’EDF Lab Chatou vise à définir les modalités de migration vers la 5G des réseaux industriels cellulaires privés d’EDF,         </div>`)[0];
+                popup_96d247bbb960298151ef73404aa16bad.setContent(html_c9a4319373a57d22623dea56d49de31d);
+            
+        
+
+        marker_0ed5d2204441f3078cf279a39991898f.bindPopup(popup_96d247bbb960298151ef73404aa16bad)
+        ;
+
+        
+    
+    
+            marker_0ed5d2204441f3078cf279a39991898f.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ac8e5ac6887d3b9f2ef5cd4c7750be8d = L.marker(
+                [47.7236111111111, -3.38833333333333],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_a6822c4b8797b779d78116a6d568b0af = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_52518f43b372eb08c8a5a9e946bce176 = $(`<div id="html_52518f43b372eb08c8a5a9e946bce176" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Bretagne<br>         <b>Numéro ARCEP :</b> 2023-2295<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_a6822c4b8797b779d78116a6d568b0af.setContent(html_52518f43b372eb08c8a5a9e946bce176);
+            
+        
+
+        marker_ac8e5ac6887d3b9f2ef5cd4c7750be8d.bindPopup(popup_a6822c4b8797b779d78116a6d568b0af)
+        ;
+
+        
+    
+    
+            marker_ac8e5ac6887d3b9f2ef5cd4c7750be8d.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_45be896a7dc254eb6e86bbf94f95bd38 = L.marker(
+                [49.4769444444444, 1.09138888888889],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_559c7ca97fd5d1fe761aae41a46651e0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_13bedbf247e41e713a912a4ddd7de805 = $(`<div id="html_13bedbf247e41e713a912a4ddd7de805" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Normandie<br>         <b>Numéro ARCEP :</b> 2023-2546<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_559c7ca97fd5d1fe761aae41a46651e0.setContent(html_13bedbf247e41e713a912a4ddd7de805);
+            
+        
+
+        marker_45be896a7dc254eb6e86bbf94f95bd38.bindPopup(popup_559c7ca97fd5d1fe761aae41a46651e0)
+        ;
+
+        
+    
+    
+            marker_45be896a7dc254eb6e86bbf94f95bd38.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_879046078f2de9d76117ddc4c93269d6 = L.marker(
+                [49.2597222222222, 1.18694444444444],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_8c8caf4ae6641a5f5089cc69ae862186 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aecfed2b7f4800681b7d409e0ad076b6 = $(`<div id="html_aecfed2b7f4800681b7d409e0ad076b6" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Normandie<br>         <b>Numéro ARCEP :</b> 2023-2547<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_8c8caf4ae6641a5f5089cc69ae862186.setContent(html_aecfed2b7f4800681b7d409e0ad076b6);
+            
+        
+
+        marker_879046078f2de9d76117ddc4c93269d6.bindPopup(popup_8c8caf4ae6641a5f5089cc69ae862186)
+        ;
+
+        
+    
+    
+            marker_879046078f2de9d76117ddc4c93269d6.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_54086b82ef3b824cff0c8cfbad495301 = L.marker(
+                [43.6027777777778, 1.45416666666667],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_3e7a4fb181414b54c586b2b0cc556323 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_91c586310870fc13de478fd7ce0234d8 = $(`<div id="html_91c586310870fc13de478fd7ce0234d8" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Occitanie<br>         <b>Numéro ARCEP :</b> 2023-2548<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_3e7a4fb181414b54c586b2b0cc556323.setContent(html_91c586310870fc13de478fd7ce0234d8);
+            
+        
+
+        marker_54086b82ef3b824cff0c8cfbad495301.bindPopup(popup_3e7a4fb181414b54c586b2b0cc556323)
+        ;
+
+        
+    
+    
+            marker_54086b82ef3b824cff0c8cfbad495301.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_070ed8463283b45bd46a86e74f8865dd = L.marker(
+                [48.8930555555556, 2.24083333333333],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_0d680126e658ec435a6d4c27e683238a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b3d3f9fc805818e408cff0b539f36d11 = $(`<div id="html_b3d3f9fc805818e408cff0b539f36d11" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2023-2474<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_0d680126e658ec435a6d4c27e683238a.setContent(html_b3d3f9fc805818e408cff0b539f36d11);
+            
+        
+
+        marker_070ed8463283b45bd46a86e74f8865dd.bindPopup(popup_0d680126e658ec435a6d4c27e683238a)
+        ;
+
+        
+    
+    
+            marker_070ed8463283b45bd46a86e74f8865dd.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c36e1ec36e12d1aa8856c97fd981003a = L.marker(
+                [48.8348611111111, 2.58816666666667],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_cb29f2ec07fcc07cc9a2a5682b344cda = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d4076f7c9e80238140617572a659e819 = $(`<div id="html_d4076f7c9e80238140617572a659e819" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2023-2549<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Plateforme expérimentale d'une solution 5G pour la captation vidéo mult-caméras         </div>`)[0];
+                popup_cb29f2ec07fcc07cc9a2a5682b344cda.setContent(html_d4076f7c9e80238140617572a659e819);
+            
+        
+
+        marker_c36e1ec36e12d1aa8856c97fd981003a.bindPopup(popup_cb29f2ec07fcc07cc9a2a5682b344cda)
+        ;
+
+        
+    
+    
+            marker_c36e1ec36e12d1aa8856c97fd981003a.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4acecaea0bb1bbee4f4f46ccebacde54 = L.marker(
+                [46.13775, 6.11705555555556],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_d5e6c4a6068e79795cd36f4618ccb317 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5f82c72fa40660f6e537f30c8a69e2b7 = $(`<div id="html_5f82c72fa40660f6e537f30c8a69e2b7" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Auvergne-Rhône-Alpes<br>         <b>Numéro ARCEP :</b> 2023-2721<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Plateforme expérimentale d'une solution 5G pour la captation vidéo mult-caméras         </div>`)[0];
+                popup_d5e6c4a6068e79795cd36f4618ccb317.setContent(html_5f82c72fa40660f6e537f30c8a69e2b7);
+            
+        
+
+        marker_4acecaea0bb1bbee4f4f46ccebacde54.bindPopup(popup_d5e6c4a6068e79795cd36f4618ccb317)
+        ;
+
+        
+    
+    
+            marker_4acecaea0bb1bbee4f4f46ccebacde54.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4313e7d5a3770aa75c9010fab9292f94 = L.marker(
+                [43.9193111111111, 2.18252777777778],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_97a013af9218b3e3b74c4da8dfe5d4c3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5a9bdec36df5ab15a54c10fe40c40132 = $(`<div id="html_5a9bdec36df5ab15a54c10fe40c40132" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Occitanie<br>         <b>Numéro ARCEP :</b> 2023-2723<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Plateforme expérimentale d'une solution 5G pour la captation vidéo mult-caméras         </div>`)[0];
+                popup_97a013af9218b3e3b74c4da8dfe5d4c3.setContent(html_5a9bdec36df5ab15a54c10fe40c40132);
+            
+        
+
+        marker_4313e7d5a3770aa75c9010fab9292f94.bindPopup(popup_97a013af9218b3e3b74c4da8dfe5d4c3)
+        ;
+
+        
+    
+    
+            marker_4313e7d5a3770aa75c9010fab9292f94.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3a18164f35315fd1c057a64ccde31895 = L.marker(
+                [48.891325, 2.23835277777778],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_7695d13d5018d9f35e8a97998ee1db7b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b2ea790f3e309cc7240955274c8726d7 = $(`<div id="html_b2ea790f3e309cc7240955274c8726d7" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2023-2720<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Bande d'acroche pour mener des expérimentations d'usage 5G dans la bande 26 GHz         </div>`)[0];
+                popup_7695d13d5018d9f35e8a97998ee1db7b.setContent(html_b2ea790f3e309cc7240955274c8726d7);
+            
+        
+
+        marker_3a18164f35315fd1c057a64ccde31895.bindPopup(popup_7695d13d5018d9f35e8a97998ee1db7b)
+        ;
+
+        
+    
+    
+            marker_3a18164f35315fd1c057a64ccde31895.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d831203b10ff561e5435270f43f519c8 = L.marker(
+                [48.8153333333333, 2.30425],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_7bb6c1b2dbe9efac49828b361424b40c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aeac2bb348db4e3e8b3b6b0dc52368c5 = $(`<div id="html_aeac2bb348db4e3e8b3b6b0dc52368c5" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2023-2812<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> La plateforme 5G SA permet d’intégrer les éléments (terminaux, RAN 5G SA et CORE 5G) d’un réseau mobile privé dans le lab d’Axione à Malakoff et de valider les performances du réseau pour les différents cas d’usage (Streaming video UL, VoIP, …)         </div>`)[0];
+                popup_7bb6c1b2dbe9efac49828b361424b40c.setContent(html_aeac2bb348db4e3e8b3b6b0dc52368c5);
+            
+        
+
+        marker_d831203b10ff561e5435270f43f519c8.bindPopup(popup_7bb6c1b2dbe9efac49828b361424b40c)
+        ;
+
+        
+    
+    
+            marker_d831203b10ff561e5435270f43f519c8.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a86f71835901188c7536f6f0bdc99b90 = L.marker(
+                [47.0664722222222, -0.857555555555556],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_5b9df64efffcabbe0a594a07b8425f29 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5bde2afa97c33b77b631ff96b6f08cda = $(`<div id="html_5bde2afa97c33b77b631ff96b6f08cda" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Pays de la Loire<br>         <b>Numéro ARCEP :</b> 2023-2815<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Thales continue l’expérimentation de la 5G sur son site industriel de Cholet pour tester dans des conditions réelles et sur l’ensemble du site de Cholet l’usage d’un réseau très haut débit permettant d’améliorer la performance industrielle ainsi que d’explorer les usages de l’industrie du futur.         </div>`)[0];
+                popup_5b9df64efffcabbe0a594a07b8425f29.setContent(html_5bde2afa97c33b77b631ff96b6f08cda);
+            
+        
+
+        marker_a86f71835901188c7536f6f0bdc99b90.bindPopup(popup_5b9df64efffcabbe0a594a07b8425f29)
+        ;
+
+        
+    
+    
+            marker_a86f71835901188c7536f6f0bdc99b90.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e43fa237fd8c3f4eb29c476eabec9531 = L.marker(
+                [48.785, 2.20805555555556],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_a0e4da50c5c277de35774800a11aa18f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7632f9830e81952fe6cc951c57d414b6 = $(`<div id="html_7632f9830e81952fe6cc951c57d414b6" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2024-0135<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre nouveaux cas d'usage         </div>`)[0];
+                popup_a0e4da50c5c277de35774800a11aa18f.setContent(html_7632f9830e81952fe6cc951c57d414b6);
+            
+        
+
+        marker_e43fa237fd8c3f4eb29c476eabec9531.bindPopup(popup_a0e4da50c5c277de35774800a11aa18f)
+        ;
+
+        
+    
+    
+            marker_e43fa237fd8c3f4eb29c476eabec9531.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f3a6db789af6b30f7408ebc0e092fe79 = L.marker(
+                [50.6108333333333, 3.13466666666667],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_54fe9c6cfa202c6ac873958e24bc4cc3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c7ad6c971fe4ff8624494d49cecc79a7 = $(`<div id="html_c7ad6c971fe4ff8624494d49cecc79a7" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Hauts-de-France<br>         <b>Numéro ARCEP :</b> 2024-0136<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> IMT Nord Europe développe des communications de type véhicule à véhicule ou à infrastructure. Le but de cette expérimentation est de tester des solutions d’échange d’informations en temps réel afin de mieux percevoir l’environnement et d’améliorer la sécurité sur un réseau 5G-NR privé en bande n°77.         </div>`)[0];
+                popup_54fe9c6cfa202c6ac873958e24bc4cc3.setContent(html_c7ad6c971fe4ff8624494d49cecc79a7);
+            
+        
+
+        marker_f3a6db789af6b30f7408ebc0e092fe79.bindPopup(popup_54fe9c6cfa202c6ac873958e24bc4cc3)
+        ;
+
+        
+    
+    
+            marker_f3a6db789af6b30f7408ebc0e092fe79.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9a23e80277c40f5a67e2d99d1675ee8b = L.marker(
+                [48.7196944444444, 2.26644444444444],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_a662865f40be952fd567d9a743079868 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_081cd404be95f047ab1e20588515fdba = $(`<div id="html_081cd404be95f047ab1e20588515fdba" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2024-0341<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Nos expériences visent à évaluer les avantages de la 5G dans le contexte de l'Industrie 4.0, en se concentrant sur l'amélioration des performances, des mesures de sécurité renforcées, une utilisation optimisée de l'énergie et uneamélioration globale de la qualité de l'expérience des opérateurs d'usine. Les applications potentielles de nos services s'étendent à divers cas d'utilisation, notamment la logistique et la livraison en usine, ainsi que la surveillance d'environnements industriels difficiles d'accès ou présentant des dangers pour les opérateurs.         </div>`)[0];
+                popup_a662865f40be952fd567d9a743079868.setContent(html_081cd404be95f047ab1e20588515fdba);
+            
+        
+
+        marker_9a23e80277c40f5a67e2d99d1675ee8b.bindPopup(popup_a662865f40be952fd567d9a743079868)
+        ;
+
+        
+    
+    
+            marker_9a23e80277c40f5a67e2d99d1675ee8b.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_32b2d0ace66716d2faedf987cb83a611 = L.marker(
+                [51.03975, 2.28252777777778],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_7ecd992e19247bd5f1d3d34d40857f79 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_93262d117b99b1ffa8dba3c0b2020118 = $(`<div id="html_93262d117b99b1ffa8dba3c0b2020118" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Hauts-de-France<br>         <b>Numéro ARCEP :</b> 2024-0342<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> L’objectif du projet est de valider l’usage industriel de la 5G en environnement industriel sévère au travers de cas d’usages ciblés sur les différents métiers et lever les incertitudes et les risques (robustesse, sécurité): • réaliser une expérimentation technique pour appréhender la technologie 5G et ses contraintes de déploiement dans un environnement industriel difficile et de vérifier la robustesse de la solution dans un contexte d’applications hautement critiques. / • mener des expérimentations d’usine intelligente pour répondre aux enjeux de performance industrielle en environnement de production tant en Région Hauts de France (Dunkerque, Mardyck, Desvres) qu’en Région Grand Est (Florange).         </div>`)[0];
+                popup_7ecd992e19247bd5f1d3d34d40857f79.setContent(html_93262d117b99b1ffa8dba3c0b2020118);
+            
+        
+
+        marker_32b2d0ace66716d2faedf987cb83a611.bindPopup(popup_7ecd992e19247bd5f1d3d34d40857f79)
+        ;
+
+        
+    
+    
+            marker_32b2d0ace66716d2faedf987cb83a611.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5bd80a7c2738136d8177a9398a2cd5ec = L.marker(
+                [48.6192222222222, 7.74827777777778],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_9d859d5a030416ea77d36838b1b3ab39 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_74dc94f24a665a679c075ccd3623fd5c = $(`<div id="html_74dc94f24a665a679c075ccd3623fd5c" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Grand Est<br>         <b>Numéro ARCEP :</b> 2024-0137<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Mise en place d’une expérimentation de réseau privé mobile 5G dans un technicentre industriel SNCF pour des cas d’usages de pilotage en temps réel et géolocalisations de machines et automatisation de transports logistiques via des AGV (Automatic Guided Vehicle) et AMR (Autonomous Mobile Robots). Le but de l’expérimentation est de mettre en évidence des cas d’usages apportant des gains de productivité au site.         </div>`)[0];
+                popup_9d859d5a030416ea77d36838b1b3ab39.setContent(html_74dc94f24a665a679c075ccd3623fd5c);
+            
+        
+
+        marker_5bd80a7c2738136d8177a9398a2cd5ec.bindPopup(popup_9d859d5a030416ea77d36838b1b3ab39)
+        ;
+
+        
+    
+    
+            marker_5bd80a7c2738136d8177a9398a2cd5ec.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_696655594632ba8c1d6ae504e7e22ef0 = L.marker(
+                [48.6193416666667, 7.74923055555556],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_57797fea24fb48e4cfbfb9b95ec61205 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2f674e054c7e36fec9223e008645b36a = $(`<div id="html_2f674e054c7e36fec9223e008645b36a" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Grand Est<br>         <b>Numéro ARCEP :</b> 2024-0138<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Mise en place d’une expérimentation de réseau privé mobile 5G dans un technicentre industriel SNCF pour des cas d’usages de pilotage en temps réel et géolocalisations de machines et automatisation de transports logistiques via des AGV (Automatic Guided Vehicle) et AMR (Autonomous Mobile Robots). Le but de l’expérimentation est de mettre en évidence des cas d’usages apportant des gains de productivité au site.         </div>`)[0];
+                popup_57797fea24fb48e4cfbfb9b95ec61205.setContent(html_2f674e054c7e36fec9223e008645b36a);
+            
+        
+
+        marker_696655594632ba8c1d6ae504e7e22ef0.bindPopup(popup_57797fea24fb48e4cfbfb9b95ec61205)
+        ;
+
+        
+    
+    
+            marker_696655594632ba8c1d6ae504e7e22ef0.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7e9ebf3eaa5bd7d923126ec430b9f53c = L.marker(
+                [48.7983333333333, 1.97],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_05a9436167bd92b7cadc6b8b3409c716 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dba837533be021c96ef55b7a32d277f4 = $(`<div id="html_dba837533be021c96ef55b7a32d277f4" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2024-0345<br>         <b>Bande de fréquences :</b> 26 GHz<br>         <b>Description :</b> Dans le cadre de ses activités de Recherche & Développement sur la 5G, Airbus Defence and Space (ADS) teste une solution de communication longue portée permettant le déploiement rapide d’un réseau de communication critique (Forces de l’Ordre, Secours, Sécurité Civile, …).         </div>`)[0];
+                popup_05a9436167bd92b7cadc6b8b3409c716.setContent(html_dba837533be021c96ef55b7a32d277f4);
+            
+        
+
+        marker_7e9ebf3eaa5bd7d923126ec430b9f53c.bindPopup(popup_05a9436167bd92b7cadc6b8b3409c716)
+        ;
+
+        
+    
+    
+            marker_7e9ebf3eaa5bd7d923126ec430b9f53c.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b81b3f03df91d29dd8bb90d0f08808ac = L.marker(
+                [48.1357639, -1.6231722],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_7b77708a5917013ad9f0ed9e0092abb5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cfe487ce38ea9ef004bc529cb9a7092c = $(`<div id="html_cfe487ce38ea9ef004bc529cb9a7092c" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Bretagne<br>         <b>Numéro ARCEP :</b> 2024-0618<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Plateforme d'expérimentation 5G, dédiée à des expérimentations techniques pour les solutions développées par B-Com et à destination des verticaux.         </div>`)[0];
+                popup_7b77708a5917013ad9f0ed9e0092abb5.setContent(html_cfe487ce38ea9ef004bc529cb9a7092c);
+            
+        
+
+        marker_b81b3f03df91d29dd8bb90d0f08808ac.bindPopup(popup_7b77708a5917013ad9f0ed9e0092abb5)
+        ;
+
+        
+    
+    
+            marker_b81b3f03df91d29dd8bb90d0f08808ac.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d25bc3915fc4d4276a9c1c06ed2253a6 = L.marker(
+                [48.7537222222222, -3.44725],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_dc73aeed762de5b6af60bed832517b8d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c7341dafabd7e24016934c99d0fcae0 = $(`<div id="html_5c7341dafabd7e24016934c99d0fcae0" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Bretagne<br>         <b>Numéro ARCEP :</b> 2024-0945<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Expérimenation dans le cadre du projet « Smart Water Network » visant à développer et expérimenter une nouvelle solution de traitement des données s’appuyant sur les bénéfices de la 5G pour la gestion dynamique des réseaux d’eau. Une telle technologie permettrait ainsi une détection accrue des fuites afin de réduire le gaspillage d’eau potable, ou d’éviter une infection des sols par des eaux usées.         </div>`)[0];
+                popup_dc73aeed762de5b6af60bed832517b8d.setContent(html_5c7341dafabd7e24016934c99d0fcae0);
+            
+        
+
+        marker_d25bc3915fc4d4276a9c1c06ed2253a6.bindPopup(popup_dc73aeed762de5b6af60bed832517b8d)
+        ;
+
+        
+    
+    
+            marker_d25bc3915fc4d4276a9c1c06ed2253a6.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0c6ecb6f494b7739ff5e8c9f3abd2855 = L.marker(
+                [48.1359166666667, -1.62325],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_d43b3b2696e415518759270562cb7e0d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_075bf313842715a7d7f457d1b824b937 = $(`<div id="html_075bf313842715a7d7f457d1b824b937" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Bretagne<br>         <b>Numéro ARCEP :</b> 2024-0945<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Expérimenation dans le cadre du projet « Smart Water Network » visant à développer et expérimenter une nouvelle solution de traitement des données s’appuyant sur les bénéfices de la 5G pour la gestion dynamique des réseaux d’eau. Une telle technologie permettrait ainsi une détection accrue des fuites afin de réduire le gaspillage d’eau potable, ou d’éviter une infection des sols par des eaux usées.         </div>`)[0];
+                popup_d43b3b2696e415518759270562cb7e0d.setContent(html_075bf313842715a7d7f457d1b824b937);
+            
+        
+
+        marker_0c6ecb6f494b7739ff5e8c9f3abd2855.bindPopup(popup_d43b3b2696e415518759270562cb7e0d)
+        ;
+
+        
+    
+    
+            marker_0c6ecb6f494b7739ff5e8c9f3abd2855.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_def6d4a880f014ef4f6d8143d5033a8f = L.marker(
+                [45.20388888888889, 5.709722222222222],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_9d22da40cc6b348c3f247deac34c9b1a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_75678a5d4021e344dd8040f7a6056bb8 = $(`<div id="html_75678a5d4021e344dd8040f7a6056bb8" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Auvergne-Rhône-Alpes<br>         <b>Numéro ARCEP :</b> 2024-0624<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Test de performances de réseau sur des cas d’usages industriels : échanges de données entre machines, pilotage à distance. Test du Hand Over.         </div>`)[0];
+                popup_9d22da40cc6b348c3f247deac34c9b1a.setContent(html_75678a5d4021e344dd8040f7a6056bb8);
+            
+        
+
+        marker_def6d4a880f014ef4f6d8143d5033a8f.bindPopup(popup_9d22da40cc6b348c3f247deac34c9b1a)
+        ;
+
+        
+    
+    
+            marker_def6d4a880f014ef4f6d8143d5033a8f.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_902264162f869227c6c7cc0c17500806 = L.marker(
+                [50.386944444444445, 3.0836111111111113],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_1af7ca0a0277e7a05777cd7b558726f3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_db973be629a1bef8a39075fb5ad65d8c = $(`<div id="html_db973be629a1bef8a39075fb5ad65d8c" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Hauts-de-France<br>         <b>Numéro ARCEP :</b> 2024-0783<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Développement de communications de type véhicule à véhicule ou à infrastructure. Le but de cette expérimentation est de tester des solutions d’échange d’informations en temps réel afin de mieux percevoir l’environnement et d’améliorer la sécurité sur un réseau 5G-NR privé en bande n°77.         </div>`)[0];
+                popup_1af7ca0a0277e7a05777cd7b558726f3.setContent(html_db973be629a1bef8a39075fb5ad65d8c);
+            
+        
+
+        marker_902264162f869227c6c7cc0c17500806.bindPopup(popup_1af7ca0a0277e7a05777cd7b558726f3)
+        ;
+
+        
+    
+    
+            marker_902264162f869227c6c7cc0c17500806.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_51365caec59aee9f4be067cd30ecba9e = L.marker(
+                [48.8929416666667, 2.23668333333333],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_3b661f1068b104fa61fb08d67bd0ed53 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_faeb23c6842796403579406674518152 = $(`<div id="html_faeb23c6842796403579406674518152" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2024-0777<br>         <b>Bande de fréquences :</b> 26 GHz<br>         <b>Description :</b> La plateforme d’expérimentation 5G permettra à Paris La Défense et ses partenaires, d’expérimenter des usages inédits dans l’environnement urbain très dense du premier quartier d’affaires d’Europe. Ce dispositif devra permettre d’anticiper des scénarii de déploiement de la 5G, d'expérimenter des cas d’usages jugés stratégiques et de tester la faisabilité et la viabilité d’un nouveau modèle : un schéma d’opérateur neutre, installant des antennes dans les bâtiments ou mobiliers urbains et commercialisant un accès clé en main aux opérateurs qui viendraient y apporter leur réseau.         </div>`)[0];
+                popup_3b661f1068b104fa61fb08d67bd0ed53.setContent(html_faeb23c6842796403579406674518152);
+            
+        
+
+        marker_51365caec59aee9f4be067cd30ecba9e.bindPopup(popup_3b661f1068b104fa61fb08d67bd0ed53)
+        ;
+
+        
+    
+    
+            marker_51365caec59aee9f4be067cd30ecba9e.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bd90806690cab7801dc14f02932bb4db = L.marker(
+                [43.40383333333333, 5.205277777777778],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_ec081cf5b46b06c64cf8940e4d2385cf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_40899c15ff545b46e9bdcad0bc901b38 = $(`<div id="html_40899c15ff545b46e9bdcad0bc901b38" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Provence-Alpes-Côte d'Azur<br>         <b>Numéro ARCEP :</b> 2024-1043<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> L'espérimentation permettra d'accompagner les PMI/ETI à découvrir et implémenter les opportunités de la 5G dans leur propre process, la TEAM Henri-Fabre met à disposition un réseau 5G privé au technocentre de Marignane.         </div>`)[0];
+                popup_ec081cf5b46b06c64cf8940e4d2385cf.setContent(html_40899c15ff545b46e9bdcad0bc901b38);
+            
+        
+
+        marker_bd90806690cab7801dc14f02932bb4db.bindPopup(popup_ec081cf5b46b06c64cf8940e4d2385cf)
+        ;
+
+        
+    
+    
+            marker_bd90806690cab7801dc14f02932bb4db.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_05bbbd2d9c26737c29c95735183f6800 = L.marker(
+                [47.07780555555556, -0.8721944444444445],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_9995c76e4df706a9cfd87b6bd44deabc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0aad102bb441b77d6838ba118ab40299 = $(`<div id="html_0aad102bb441b77d6838ba118ab40299" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Pays de la Loire<br>         <b>Numéro ARCEP :</b> 2024-1141<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> L'expérimentation consiste à tester dans des conditions réelles et à grande échelle l’usage d’un réseau très haut débit permettant d’améliorer la performance industrielle ainsi que d’explorer les usages de l’industrie du futur         </div>`)[0];
+                popup_9995c76e4df706a9cfd87b6bd44deabc.setContent(html_0aad102bb441b77d6838ba118ab40299);
+            
+        
+
+        marker_05bbbd2d9c26737c29c95735183f6800.bindPopup(popup_9995c76e4df706a9cfd87b6bd44deabc)
+        ;
+
+        
+    
+    
+            marker_05bbbd2d9c26737c29c95735183f6800.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a08fb46195dcd94b5bceac4913b4414a = L.marker(
+                [47.07669444444445, -0.8706111111111111],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_59d609ba98450d0034ab590ba316834f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_15370139ec23731b4cf01f525e00335a = $(`<div id="html_15370139ec23731b4cf01f525e00335a" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Pays de la Loire<br>         <b>Numéro ARCEP :</b> 2024-1142<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> L'expérimentation consiste à tester dans des conditions réelles et à grande échelle l’usage d’un réseau très haut débit permettant d’améliorer la performance industrielle ainsi que d’explorer les usages de l’industrie du futur         </div>`)[0];
+                popup_59d609ba98450d0034ab590ba316834f.setContent(html_15370139ec23731b4cf01f525e00335a);
+            
+        
+
+        marker_a08fb46195dcd94b5bceac4913b4414a.bindPopup(popup_59d609ba98450d0034ab590ba316834f)
+        ;
+
+        
+    
+    
+            marker_a08fb46195dcd94b5bceac4913b4414a.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0ba0484d7b01c4b746629ec442ef81ed = L.marker(
+                [49.47944444444445, 0.1676388888888889],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_7858e5095543de3c973fe82e3d0d37ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e3ee7c5cd198d5ebb0dea3971356be9a = $(`<div id="html_e3ee7c5cd198d5ebb0dea3971356be9a" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Normandie<br>         <b>Numéro ARCEP :</b> 2024-1157<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> L'expérimentation consiste à tester des cas d'usage liés à la manutention portuaire         </div>`)[0];
+                popup_7858e5095543de3c973fe82e3d0d37ab.setContent(html_e3ee7c5cd198d5ebb0dea3971356be9a);
+            
+        
+
+        marker_0ba0484d7b01c4b746629ec442ef81ed.bindPopup(popup_7858e5095543de3c973fe82e3d0d37ab)
+        ;
+
+        
+    
+    
+            marker_0ba0484d7b01c4b746629ec442ef81ed.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a5703d60b429c51c15dd06aa7f9e85f0 = L.marker(
+                [5.171291, -52.680494],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_38dadc161a03837ef557195e12d47559 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_622325157df815c4a3df8879c4be9e82 = $(`<div id="html_622325157df815c4a3df8879c4be9e82" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Guyane<br>         <b>Numéro ARCEP :</b> 2024-1762<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Le CSG et Axians expérimentent les usages de la 5G privée dans le cadre de la transformation numérique du CNES. Axians installe et forme le CNES sur un réseau 5G privé et ses services comme les comm. critiques, la liaison téléphonie, la remontée des alarmes         </div>`)[0];
+                popup_38dadc161a03837ef557195e12d47559.setContent(html_622325157df815c4a3df8879c4be9e82);
+            
+        
+
+        marker_a5703d60b429c51c15dd06aa7f9e85f0.bindPopup(popup_38dadc161a03837ef557195e12d47559)
+        ;
+
+        
+    
+    
+            marker_a5703d60b429c51c15dd06aa7f9e85f0.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_141ab8ede5acc15c0567f5de1d5d4a48 = L.marker(
+                [48.105000000000004, -1.636388888888889],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_249ba7e44069fff845281c9f431d359d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_96ca33099316c8674d9e173ff685112e = $(`<div id="html_96ca33099316c8674d9e173ff685112e" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Bretagne<br>         <b>Numéro ARCEP :</b> 2024-1158<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_249ba7e44069fff845281c9f431d359d.setContent(html_96ca33099316c8674d9e173ff685112e);
+            
+        
+
+        marker_141ab8ede5acc15c0567f5de1d5d4a48.bindPopup(popup_249ba7e44069fff845281c9f431d359d)
+        ;
+
+        
+    
+    
+            marker_141ab8ede5acc15c0567f5de1d5d4a48.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_93e3bf5a54ebb4676694584eae6a507a = L.marker(
+                [43.61416666666667, 7.07111111111111],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_03b9ff0041b978f25e5611b8ee23653e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_265e7b46e444101b74bd5c76416e0267 = $(`<div id="html_265e7b46e444101b74bd5c76416e0267" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Provence-Alpes-Côte d'Azur<br>         <b>Numéro ARCEP :</b> 2024-1415<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage - Site d’expérimentation Européen pour les technologies cellulaires 5G/6G         </div>`)[0];
+                popup_03b9ff0041b978f25e5611b8ee23653e.setContent(html_265e7b46e444101b74bd5c76416e0267);
+            
+        
+
+        marker_93e3bf5a54ebb4676694584eae6a507a.bindPopup(popup_03b9ff0041b978f25e5611b8ee23653e)
+        ;
+
+        
+    
+    
+            marker_93e3bf5a54ebb4676694584eae6a507a.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6722038b8a2ef4c0ef7860c0155f379b = L.marker(
+                [43.61416666666667, 7.07111111111111],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_5c8193f82de7cbcc8ac2a0f97a4b5973 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a0da395207234982820efe85157a4bf6 = $(`<div id="html_a0da395207234982820efe85157a4bf6" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Provence-Alpes-Côte d'Azur<br>         <b>Numéro ARCEP :</b> 2024-1159<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage - Site d’expérimentation Européen pour les technologies cellulaires 5G/6G         </div>`)[0];
+                popup_5c8193f82de7cbcc8ac2a0f97a4b5973.setContent(html_a0da395207234982820efe85157a4bf6);
+            
+        
+
+        marker_6722038b8a2ef4c0ef7860c0155f379b.bindPopup(popup_5c8193f82de7cbcc8ac2a0f97a4b5973)
+        ;
+
+        
+    
+    
+            marker_6722038b8a2ef4c0ef7860c0155f379b.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f044efdbd7b50f27e6144ebe842bafae = L.marker(
+                [43.61416666666667, 7.07083333333333],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_47f8fbe1ad317f103c5b96be03451486 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f970c861c8a55cf71eedc32bfc58ab90 = $(`<div id="html_f970c861c8a55cf71eedc32bfc58ab90" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Provence-Alpes-Côte d'Azur<br>         <b>Numéro ARCEP :</b> 2024-1413<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_47f8fbe1ad317f103c5b96be03451486.setContent(html_f970c861c8a55cf71eedc32bfc58ab90);
+            
+        
+
+        marker_f044efdbd7b50f27e6144ebe842bafae.bindPopup(popup_47f8fbe1ad317f103c5b96be03451486)
+        ;
+
+        
+    
+    
+            marker_f044efdbd7b50f27e6144ebe842bafae.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_62633b5fbdd2b5e80b01118bfa35e9e0 = L.marker(
+                [43.43194444444444, 4.89722222222222],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_02d843756a12688932ed024f6b8a698d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b0362fb7713e2e465555c1ded39f6cac = $(`<div id="html_b0362fb7713e2e465555c1ded39f6cac" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Provence-Alpes-Côte d'Azur<br>         <b>Numéro ARCEP :</b> 2024-1229<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_02d843756a12688932ed024f6b8a698d.setContent(html_b0362fb7713e2e465555c1ded39f6cac);
+            
+        
+
+        marker_62633b5fbdd2b5e80b01118bfa35e9e0.bindPopup(popup_02d843756a12688932ed024f6b8a698d)
+        ;
+
+        
+    
+    
+            marker_62633b5fbdd2b5e80b01118bfa35e9e0.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_965efa90f9b26b9833067ecafb8372c4 = L.marker(
+                [48.05916666666666, -0.7127777777777777],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_31416a32ddf76ecc43bfd17e8868ded9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_31cfb64440d84892868ef61485af0509 = $(`<div id="html_31cfb64440d84892868ef61485af0509" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Bretagne<br>         <b>Numéro ARCEP :</b> 2024-1316<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Le Campus GO>5GI EXCELCAR a pour objectif d’accélérer la transformation numérique de l’industrie. De nombreux cas d’usages, de l’opérateur au robot connecté, vont être développés et qualifiés sur la Plateforme en conditions industrielles réelles.         </div>`)[0];
+                popup_31416a32ddf76ecc43bfd17e8868ded9.setContent(html_31cfb64440d84892868ef61485af0509);
+            
+        
+
+        marker_965efa90f9b26b9833067ecafb8372c4.bindPopup(popup_31416a32ddf76ecc43bfd17e8868ded9)
+        ;
+
+        
+    
+    
+            marker_965efa90f9b26b9833067ecafb8372c4.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_81dfb6f98b7a04f92240feacd118f1ed = L.marker(
+                [48.120555555555555, -1.6247222222222222],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_1c7c24f51bd1084e3f66fa369bb2e6d4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5a232c0ea88cd56b67a58b2b03559886 = $(`<div id="html_5a232c0ea88cd56b67a58b2b03559886" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Bretagne<br>         <b>Numéro ARCEP :</b> 2024-1632<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_1c7c24f51bd1084e3f66fa369bb2e6d4.setContent(html_5a232c0ea88cd56b67a58b2b03559886);
+            
+        
+
+        marker_81dfb6f98b7a04f92240feacd118f1ed.bindPopup(popup_1c7c24f51bd1084e3f66fa369bb2e6d4)
+        ;
+
+        
+    
+    
+            marker_81dfb6f98b7a04f92240feacd118f1ed.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_914a2a370001da8e5f7a2ade99533c65 = L.marker(
+                [49.98444444444444, 2.6777777777777776],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_ce6b9d3ce1daeda11e3e3803df5d668b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_74e9f61a5296580aaa1b5326aec25449 = $(`<div id="html_74e9f61a5296580aaa1b5326aec25449" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Hauts-de-France<br>         <b>Numéro ARCEP :</b> 2024-1910<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> L'objectif de cette expérimentation est de déployer un réseau 5G privatif capable de localiser les outils avec une précision inférieure à 1m, tout en permettant d'écouler le traffic sans fil critique d'Airbus Atlantic,         </div>`)[0];
+                popup_ce6b9d3ce1daeda11e3e3803df5d668b.setContent(html_74e9f61a5296580aaa1b5326aec25449);
+            
+        
+
+        marker_914a2a370001da8e5f7a2ade99533c65.bindPopup(popup_ce6b9d3ce1daeda11e3e3803df5d668b)
+        ;
+
+        
+    
+    
+            marker_914a2a370001da8e5f7a2ade99533c65.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b813c5242f515efe96b0c2381a8781e3 = L.marker(
+                [42.62269444444445, 2.443277777777778],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_44e45e9824e4e640eb2ff8d4611ba64e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ddc2b6cdc1676ac5aac0159c9860457e = $(`<div id="html_ddc2b6cdc1676ac5aac0159c9860457e" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Occitanie<br>         <b>Numéro ARCEP :</b> 2024-2014<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> le groupe SEE CRITICAL COMMS a besoin de tester ses produits et solutions avec les objectifs suivants : Tester et qualifier les répéteurs 5G développés par le groupe ainsi que leurs antennes associées. Ces produits seront proposés aux intégrateurs et intégrés dans des réseaux destinés aux entreprises et aux collectivités. - Mettre en place un banc de tests 5G privé en N77 pour évaluer les nouvelles solutions applicatives développées par le groupe, répondant ainsi aux besoins de leurs clients, principalement pour des bulles tactiques.         </div>`)[0];
+                popup_44e45e9824e4e640eb2ff8d4611ba64e.setContent(html_ddc2b6cdc1676ac5aac0159c9860457e);
+            
+        
+
+        marker_b813c5242f515efe96b0c2381a8781e3.bindPopup(popup_44e45e9824e4e640eb2ff8d4611ba64e)
+        ;
+
+        
+    
+    
+            marker_b813c5242f515efe96b0c2381a8781e3.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5e8525756cf0cf17d4d8940baa3190a6 = L.marker(
+                [43.41008333333333, 4.845416666666666],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_ac2961c75db4e5825d87fc96062fa0c6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e343b4a5ff6f2398f64c0a2535d50b44 = $(`<div id="html_e343b4a5ff6f2398f64c0a2535d50b44" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Provence-Alpes-Côte d'Azur<br>         <b>Numéro ARCEP :</b> 2024-2003<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> LUCEOR et son partenaire EUROFOS ambitionnent de couvrir le Port en réseau cellulaire de type 5G privée. L’enjeu est d’expérimenter le remplacement des réseaux existants jugés trop limités et trop coûteux. À la place, le personnel seraient tous dotés d’un terminal de type smartphone durci capable de recevoir et d’émettre tous types de communication, mais aussi de s’interfacer avec des solutions tierces en cloud. Et les cavaliers seraient dotés d’un système de détection et d’évitement qui réduit très considérablement le risque d’accidents dans les zones d’activité du port.         </div>`)[0];
+                popup_ac2961c75db4e5825d87fc96062fa0c6.setContent(html_e343b4a5ff6f2398f64c0a2535d50b44);
+            
+        
+
+        marker_5e8525756cf0cf17d4d8940baa3190a6.bindPopup(popup_ac2961c75db4e5825d87fc96062fa0c6)
+        ;
+
+        
+    
+    
+            marker_5e8525756cf0cf17d4d8940baa3190a6.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fbe1caefd26495891c3518558c1a7147 = L.marker(
+                [48.07033333333334, -1.70125],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_4c053ff1d67c0554b7ba4764d357c58f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_effb8c9d46335b32b8de1a6c60c3a8f0 = $(`<div id="html_effb8c9d46335b32b8de1a6c60c3a8f0" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Bretagne<br>         <b>Numéro ARCEP :</b> 2024-2044<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre de la plateforme Living Labs, qui vise à tester des usages liés aux voyageurs et aux expertises SNCF, en gare et en milieu industriel. Le Living Labs 5G a pour objectif d’être une plateforme d’innovation ouverte à des entreprises extérieures pour la mise en place d’expérimentations.         </div>`)[0];
+                popup_4c053ff1d67c0554b7ba4764d357c58f.setContent(html_effb8c9d46335b32b8de1a6c60c3a8f0);
+            
+        
+
+        marker_fbe1caefd26495891c3518558c1a7147.bindPopup(popup_4c053ff1d67c0554b7ba4764d357c58f)
+        ;
+
+        
+    
+    
+            marker_fbe1caefd26495891c3518558c1a7147.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_746ffa8950f7e867482a72ac3f43c2ae = L.marker(
+                [48.824444444444445, 2.265],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_5c1af56c75780992e604318eb138304e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_673b0a679f93518b363a9783b8714749 = $(`<div id="html_673b0a679f93518b363a9783b8714749" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2024-2020<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_5c1af56c75780992e604318eb138304e.setContent(html_673b0a679f93518b363a9783b8714749);
+            
+        
+
+        marker_746ffa8950f7e867482a72ac3f43c2ae.bindPopup(popup_5c1af56c75780992e604318eb138304e)
+        ;
+
+        
+    
+    
+            marker_746ffa8950f7e867482a72ac3f43c2ae.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_aa226d524bba7cf034cd12d65182bfb4 = L.marker(
+                [47.38447222222222, 0.7306944444444444],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_cebac5a8d8b2f94ad4dd610cd36356b8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_df12e8a237b585929483c909b32aa76d = $(`<div id="html_df12e8a237b585929483c909b32aa76d" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Centre-Val de Loire<br>         <b>Numéro ARCEP :</b> 2024-2597<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Le but de cette expérimentation est de tester des solutions d’échange d’informations de véhicule à véhicule ou à infrastructure en temps réel afin de mieux percevoir l’environnement et d’améliorer la sécurité sur un réseau 5G-NR privé en bande n°77         </div>`)[0];
+                popup_cebac5a8d8b2f94ad4dd610cd36356b8.setContent(html_df12e8a237b585929483c909b32aa76d);
+            
+        
+
+        marker_aa226d524bba7cf034cd12d65182bfb4.bindPopup(popup_cebac5a8d8b2f94ad4dd610cd36356b8)
+        ;
+
+        
+    
+    
+            marker_aa226d524bba7cf034cd12d65182bfb4.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_be9d7e6c6e2cfdc988cbad8889c53b9b = L.marker(
+                [48.89111111111111, 2.2466666666666666],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_136d8e8f6762cc507c22b2468c113432 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cba423b79aaa42805ffc84adbf32ff07 = $(`<div id="html_cba423b79aaa42805ffc84adbf32ff07" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2024-2147<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> L’objectif est de mettre en place cette infrastructure début octobre 2024 afin de valider différents cas d’usages autour de la 5G Stand Alone (5G SA), en particulier autour de l’Industrie 4.0, Il s’agira également de pouvoir tester différentes capacités d’hybridation entre réseau mobile privé et réseaux mobiles publics. Les derniers tests d’intérêts seront autour des interconnections roaming entre réseaux publics et privés ainsi que des solutions de eSIM public/privés (QR code d’accès avec fluidification du parcours d’on-boarding) et les SMS offnet         </div>`)[0];
+                popup_136d8e8f6762cc507c22b2468c113432.setContent(html_cba423b79aaa42805ffc84adbf32ff07);
+            
+        
+
+        marker_be9d7e6c6e2cfdc988cbad8889c53b9b.bindPopup(popup_136d8e8f6762cc507c22b2468c113432)
+        ;
+
+        
+    
+    
+            marker_be9d7e6c6e2cfdc988cbad8889c53b9b.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8efd2a189d46c4f42c8ef3c469c38f9c = L.marker(
+                [50.361333333333334, 3.0289444444444444],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_87bfbfa70c81b48d539c490428c4c6ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f63ebf4658c315abf2b44952917b44d5 = $(`<div id="html_f63ebf4658c315abf2b44952917b44d5" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Hauts-de-France<br>         <b>Numéro ARCEP :</b> 2024-2252<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation 5G pour l’industrie et le véhicule connectée.         </div>`)[0];
+                popup_87bfbfa70c81b48d539c490428c4c6ac.setContent(html_f63ebf4658c315abf2b44952917b44d5);
+            
+        
+
+        marker_8efd2a189d46c4f42c8ef3c469c38f9c.bindPopup(popup_87bfbfa70c81b48d539c490428c4c6ac)
+        ;
+
+        
+    
+    
+            marker_8efd2a189d46c4f42c8ef3c469c38f9c.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ec78a2482fe4ecbb2ad50063e0031218 = L.marker(
+                [49.009972222222224, 2.554305555555555],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_d7673961ceeb62b5b51145558f1bc381 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5d8bef83b306b21a43dbb239a010302c = $(`<div id="html_5d8bef83b306b21a43dbb239a010302c" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2024-2148<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Dans le cadre de la journée de l’aéro, Hub One réalise des démonstrations de cas d’usage 5G professionnels pour les milieux aéroportuaires et industriels.         </div>`)[0];
+                popup_d7673961ceeb62b5b51145558f1bc381.setContent(html_5d8bef83b306b21a43dbb239a010302c);
+            
+        
+
+        marker_ec78a2482fe4ecbb2ad50063e0031218.bindPopup(popup_d7673961ceeb62b5b51145558f1bc381)
+        ;
+
+        
+    
+    
+            marker_ec78a2482fe4ecbb2ad50063e0031218.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0ec32da976f94b58f12c0f35d646c60e = L.marker(
+                [49.25983333333333, 1.187138888888889],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_99b47d07e26cd17744d269e1b88b9598 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5a473b406ba60ac862aa1f78557da0f9 = $(`<div id="html_5a473b406ba60ac862aa1f78557da0f9" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Normandie<br>         <b>Numéro ARCEP :</b> 2024-2251<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_99b47d07e26cd17744d269e1b88b9598.setContent(html_5a473b406ba60ac862aa1f78557da0f9);
+            
+        
+
+        marker_0ec32da976f94b58f12c0f35d646c60e.bindPopup(popup_99b47d07e26cd17744d269e1b88b9598)
+        ;
+
+        
+    
+    
+            marker_0ec32da976f94b58f12c0f35d646c60e.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9bfa9e3bccea47eb91ad64053fec3a55 = L.marker(
+                [45.85447222222222, 4.699638888888889],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_efa131068c1514e5f00e308b4a2fa268 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9e9cb9910fdc03b8b59312767449bb28 = $(`<div id="html_9e9cb9910fdc03b8b59312767449bb28" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Auvergne-Rhône-Alpes<br>         <b>Numéro ARCEP :</b> 2024-2195<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Déploiement d’un réseau privé 5G au sein du nouveau Lab de la société MGA Technologies créateur de machines sur-mesure pour l'industrie du futur. Ce Lab permettra d’expérimenter un réseau 5G en environnement industriel et de développer des prototypes de cas d’usage. Il servira également de showcase pour les clients et promouvra la 5G         </div>`)[0];
+                popup_efa131068c1514e5f00e308b4a2fa268.setContent(html_9e9cb9910fdc03b8b59312767449bb28);
+            
+        
+
+        marker_9bfa9e3bccea47eb91ad64053fec3a55.bindPopup(popup_efa131068c1514e5f00e308b4a2fa268)
+        ;
+
+        
+    
+    
+            marker_9bfa9e3bccea47eb91ad64053fec3a55.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b7fb66c6be11a70e859b4e55e2b4e8f6 = L.marker(
+                [48.8973611111111, 2.17008333333333],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_7455db7677a1d8589f0a8ed88e5cd4f2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a9a0aa1a59033ad8b7374177d4f3cf4b = $(`<div id="html_a9a0aa1a59033ad8b7374177d4f3cf4b" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2024-2296<br>         <b>Bande de fréquences :</b> 26 GHz<br>         <b>Description :</b> Plateforme d’expérimentation d’EDF Lab Chatou qui vise à définir les modalités de migration des réseaux industriels cellulaires privés d’EDF vers la technologie 5G.         </div>`)[0];
+                popup_7455db7677a1d8589f0a8ed88e5cd4f2.setContent(html_a9a0aa1a59033ad8b7374177d4f3cf4b);
+            
+        
+
+        marker_b7fb66c6be11a70e859b4e55e2b4e8f6.bindPopup(popup_7455db7677a1d8589f0a8ed88e5cd4f2)
+        ;
+
+        
+    
+    
+            marker_b7fb66c6be11a70e859b4e55e2b4e8f6.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a7d019588bf37aa0d9f08d79d7c55d7b = L.marker(
+                [43.36127777777778, 5.337638888888889],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_f33f9caed48143354b427fd3f34204b9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2743ff0d22ef023b360a97f0a7defa47 = $(`<div id="html_2743ff0d22ef023b360a97f0a7defa47" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Provence-Alpes-Côte d'Azur<br>         <b>Numéro ARCEP :</b> 2024-2565<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Free Pro mène une expérimentation de réseau privé 5G à Marseille, au sein d’un data center, afin de démontrer l’efficacité de cette technologie dans un environnement exigent et critique. L'objectif principal est de fournir une couverture 5G SA Privée et sécurisée, adaptée aux besoins spécifiques du data center, garantissant ainsi la confidentialité et la résilience des communications tout en évitant les interférences avec les réseaux publics. Ce réseau privé permet de répondre aux exigences de performance en matière de débits et de latence, nécessaires aux opérations sensibles du datacenter         </div>`)[0];
+                popup_f33f9caed48143354b427fd3f34204b9.setContent(html_2743ff0d22ef023b360a97f0a7defa47);
+            
+        
+
+        marker_a7d019588bf37aa0d9f08d79d7c55d7b.bindPopup(popup_f33f9caed48143354b427fd3f34204b9)
+        ;
+
+        
+    
+    
+            marker_a7d019588bf37aa0d9f08d79d7c55d7b.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_49ea56b911e406a89a5ed8e67079eaa0 = L.marker(
+                [48.7997222222222, 2.29416666666667],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_fdf7b72769242c43fd659920a8832c70 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cda6c32842111373622e96ada194942f = $(`<div id="html_cda6c32842111373622e96ada194942f" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2024-2634<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation qui vise à tester la mise en oeuvre d’équipements (typiquement panneaux solaires et batteries) et de fonctionnalités au sein de l’environnement technique des sites radio mobiles, afin d’optimiser la consommation d’énergie du réseau électrique et de participer à la flexibilité énergétique.         </div>`)[0];
+                popup_fdf7b72769242c43fd659920a8832c70.setContent(html_cda6c32842111373622e96ada194942f);
+            
+        
+
+        marker_49ea56b911e406a89a5ed8e67079eaa0.bindPopup(popup_fdf7b72769242c43fd659920a8832c70)
+        ;
+
+        
+    
+    
+            marker_49ea56b911e406a89a5ed8e67079eaa0.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f7006af987f8263f8e1e95569c12c86c = L.marker(
+                [48.91361111111111, 2.3175],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_8d2a601ffa5f84ff3318a4a237726fa4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_719326338dbddeb445e4e6ed165cf4ee = $(`<div id="html_719326338dbddeb445e4e6ed165cf4ee" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2024-2691<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> L’objectif du projet est l’expérimentation et la mise en oeuvre de technologies et services numériques souverains pour le futur système de télécommunication mobile ferroviaire (FRMCS) qui sera basé sur la 5G. Il se focalise particulièrement sur les coeurs de réseaux 5G et les services assurant les missions critiques (MCx) ainsi que sur l’hybridation entre 2 coeurs de réseau. L’infra 5G pour les besoins des cas d’usages ferroviaires sera hébergé dans le labo SNCF Réseau à Saint-Ouen.         </div>`)[0];
+                popup_8d2a601ffa5f84ff3318a4a237726fa4.setContent(html_719326338dbddeb445e4e6ed165cf4ee);
+            
+        
+
+        marker_f7006af987f8263f8e1e95569c12c86c.bindPopup(popup_8d2a601ffa5f84ff3318a4a237726fa4)
+        ;
+
+        
+    
+    
+            marker_f7006af987f8263f8e1e95569c12c86c.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_946eb273dcc5680fcc66b5dfbcd72362 = L.marker(
+                [48.85827777777778, 2.2944999999999998],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_ef215e986c2e52acc78246b06e512390 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e12fae809b8b4e2a92b69dc60fe21ce2 = $(`<div id="html_e12fae809b8b4e2a92b69dc60fe21ce2" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2024-2692<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Jusqu'à présent, le centre TDF de la Tour Eiffel ne disposait d'aucune couverture réseau mobile. L’expérimentation visant à équiper le centre d'une solution de téléphonie mobile professionnelle permet de garantir la sécurité des intervenants de TDF via l'applicatif MCPTT(PTI : Protection des travailleurs isolés). Ainsi, elle leur permet également d'être joignables à tout moment et de bénéficier d'un accès à internet et à l'intranet TDF pour télécharger les documents nécessaires à leurs interventions.         </div>`)[0];
+                popup_ef215e986c2e52acc78246b06e512390.setContent(html_e12fae809b8b4e2a92b69dc60fe21ce2);
+            
+        
+
+        marker_946eb273dcc5680fcc66b5dfbcd72362.bindPopup(popup_ef215e986c2e52acc78246b06e512390)
+        ;
+
+        
+    
+    
+            marker_946eb273dcc5680fcc66b5dfbcd72362.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2b81ce861297d58a9a9573ac712d3bcd = L.marker(
+                [48.83888888888889, 2.3786111111111112],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_14254abbe2afc656039a01744358a296 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1c0726914579c45925d64c5d004fb332 = $(`<div id="html_1c0726914579c45925d64c5d004fb332" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2025-0205<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Plateforme d’expérimentation de captation vidéo sur réseau 5G SA en vue de fournir des solutions de connectivité mobile pour les grands évènements.         </div>`)[0];
+                popup_14254abbe2afc656039a01744358a296.setContent(html_1c0726914579c45925d64c5d004fb332);
+            
+        
+
+        marker_2b81ce861297d58a9a9573ac712d3bcd.bindPopup(popup_14254abbe2afc656039a01744358a296)
+        ;
+
+        
+    
+    
+            marker_2b81ce861297d58a9a9573ac712d3bcd.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e3cc793aa9d4aa0b3f1e3c1af46a2516 = L.marker(
+                [48.925, 2.359166666666667],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_f2ad843ee02050e2f51b959a8ad3d46c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1527782b5e0149154b61ac6b0aa17cd7 = $(`<div id="html_1527782b5e0149154b61ac6b0aa17cd7" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2025-0205<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Plateforme d’expérimentation de captation vidéo sur réseau 5G SA en vue de fournir des solutions de connectivité mobile pour les grands évènements.         </div>`)[0];
+                popup_f2ad843ee02050e2f51b959a8ad3d46c.setContent(html_1527782b5e0149154b61ac6b0aa17cd7);
+            
+        
+
+        marker_e3cc793aa9d4aa0b3f1e3c1af46a2516.bindPopup(popup_f2ad843ee02050e2f51b959a8ad3d46c)
+        ;
+
+        
+    
+    
+            marker_e3cc793aa9d4aa0b3f1e3c1af46a2516.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a1594a23e20d8d26f4f3144a0423c413 = L.marker(
+                [48.895833333333336, 2.230277777777778],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_2bf6f29e4b95d4ddcfc857b8b95324b0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cee2dda41532e6ce6fa20ed125f0b92b = $(`<div id="html_cee2dda41532e6ce6fa20ed125f0b92b" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2025-0205<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Plateforme d’expérimentation de captation vidéo sur réseau 5G SA en vue de fournir des solutions de connectivité mobile pour les grands évènements.         </div>`)[0];
+                popup_2bf6f29e4b95d4ddcfc857b8b95324b0.setContent(html_cee2dda41532e6ce6fa20ed125f0b92b);
+            
+        
+
+        marker_a1594a23e20d8d26f4f3144a0423c413.bindPopup(popup_2bf6f29e4b95d4ddcfc857b8b95324b0)
+        ;
+
+        
+    
+    
+            marker_a1594a23e20d8d26f4f3144a0423c413.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_deae905e12871912c416f4420dd2d695 = L.marker(
+                [48.71769444444445, 2.217027777777778],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_2aba798e28b904d46c0e9bf7cbfa2517 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2f4ed0926e6a8e4a4582cb828c85b232 = $(`<div id="html_2f4ed0926e6a8e4a4582cb828c85b232" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2025-0185<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> La Société des Grands Projets prévoit de déployer une infrastructure radio LTE privée afin d’assurer les communications en 4G LTE entre les agents de terrain et permettre aux services de secours et de sécurité de communiquer dans les emprises du GPE (dans le cadre du RRF).         </div>`)[0];
+                popup_2aba798e28b904d46c0e9bf7cbfa2517.setContent(html_2f4ed0926e6a8e4a4582cb828c85b232);
+            
+        
+
+        marker_deae905e12871912c416f4420dd2d695.bindPopup(popup_2aba798e28b904d46c0e9bf7cbfa2517)
+        ;
+
+        
+    
+    
+            marker_deae905e12871912c416f4420dd2d695.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_039da3c0ed75a1b3e20bda523c241090 = L.marker(
+                [48.83416666666667, 2.258611111111111],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_0aa7287358b63ebcef169a6a5e643c03 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5572f3e88d4cf54406c499e505e7019d = $(`<div id="html_5572f3e88d4cf54406c499e505e7019d" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2024-2842<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Devant le risque de saturation sur les zones à forte densité humaine , un renfort local de couverture 4G sera assurée par une Bulle 4G mobile raccordée à un système satellitaire Starlink version mobile         </div>`)[0];
+                popup_0aa7287358b63ebcef169a6a5e643c03.setContent(html_5572f3e88d4cf54406c499e505e7019d);
+            
+        
+
+        marker_039da3c0ed75a1b3e20bda523c241090.bindPopup(popup_0aa7287358b63ebcef169a6a5e643c03)
+        ;
+
+        
+    
+    
+            marker_039da3c0ed75a1b3e20bda523c241090.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cc8a46a63bbae774fa44fcd5f06d2172 = L.marker(
+                [48.7875, 2.2197222222222224],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_f829f44f2ed4145af47a1fe82c70e563 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6a970a17535e790dd5c8640a5d2cd6c2 = $(`<div id="html_6a970a17535e790dd5c8640a5d2cd6c2" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2024-2842<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_f829f44f2ed4145af47a1fe82c70e563.setContent(html_6a970a17535e790dd5c8640a5d2cd6c2);
+            
+        
+
+        marker_cc8a46a63bbae774fa44fcd5f06d2172.bindPopup(popup_f829f44f2ed4145af47a1fe82c70e563)
+        ;
+
+        
+    
+    
+            marker_cc8a46a63bbae774fa44fcd5f06d2172.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5bef436d7454ffbbe2eba6f5682d3ea2 = L.marker(
+                [48.88502777777778, 2.4219166666666667],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_e3837c8f9b66c9815092b4f91fe24668 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7c4b990a13590d208abbd49c9f2536ed = $(`<div id="html_7c4b990a13590d208abbd49c9f2536ed" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2024-2844<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> TDF, intégrateur des réseaux mobiles privés (RMP) 4G et 5G, déploie un réseau d’expérimentation 4G sur une partie de son Campus Technique situé au Fort de Romainville. Ce réseau permettra à TDF de réaliser des démonstrations pour ses différents clients RMP et de poursuivre les études et travaux de développement menés pour le compte de ses clients dans le domaine des réseaux mobiles privés 4G/5G.         </div>`)[0];
+                popup_e3837c8f9b66c9815092b4f91fe24668.setContent(html_7c4b990a13590d208abbd49c9f2536ed);
+            
+        
+
+        marker_5bef436d7454ffbbe2eba6f5682d3ea2.bindPopup(popup_e3837c8f9b66c9815092b4f91fe24668)
+        ;
+
+        
+    
+    
+            marker_5bef436d7454ffbbe2eba6f5682d3ea2.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a4efe98c9559fdf380a2f7911068649d = L.marker(
+                [48.7625, 2.0825],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_7e5272de7ab3185dfcc8846ab9022ecf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_30bf8e90c6cbcb802d57177575e0413a = $(`<div id="html_30bf8e90c6cbcb802d57177575e0413a" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2025-0696<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Expérimentation dans le cadre de nouveaux cas d'usage         </div>`)[0];
+                popup_7e5272de7ab3185dfcc8846ab9022ecf.setContent(html_30bf8e90c6cbcb802d57177575e0413a);
+            
+        
+
+        marker_a4efe98c9559fdf380a2f7911068649d.bindPopup(popup_7e5272de7ab3185dfcc8846ab9022ecf)
+        ;
+
+        
+    
+    
+            marker_a4efe98c9559fdf380a2f7911068649d.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c39b21ffce0c96c6f7ede07015369bab = L.marker(
+                [48.934, 2.252638888888889],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_3225b9313a00f72412cfce33dd083fb5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_73843e8f307df750ca426d9c32043379 = $(`<div id="html_73843e8f307df750ca426d9c32043379" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2025-0136<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation menée dans une salle d'exposition pour démontrer aux clients les différents cas d'utilisation tels que l'IoT, la voix et la vidéo,         </div>`)[0];
+                popup_3225b9313a00f72412cfce33dd083fb5.setContent(html_73843e8f307df750ca426d9c32043379);
+            
+        
+
+        marker_c39b21ffce0c96c6f7ede07015369bab.bindPopup(popup_3225b9313a00f72412cfce33dd083fb5)
+        ;
+
+        
+    
+    
+            marker_c39b21ffce0c96c6f7ede07015369bab.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_91d63c4d9f1fb8685e9103703089ff93 = L.marker(
+                [49.46336111111111, 0.14216666666666666],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_ebbf7b5186de967c08d3952c6b4a924e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9c094a48f8e880664ba20bd8114ed3e6 = $(`<div id="html_9c094a48f8e880664ba20bd8114ed3e6" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Normandie<br>         <b>Numéro ARCEP :</b> 2025-0103<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Dans le cadre du programme Le Havre Smart Port City, le 5G Lab déploie des stations d’émission radio 5G dans la bande 2,6 GHz TDD pour expérimenter les cas d’usage de communication terre-mer.         </div>`)[0];
+                popup_ebbf7b5186de967c08d3952c6b4a924e.setContent(html_9c094a48f8e880664ba20bd8114ed3e6);
+            
+        
+
+        marker_91d63c4d9f1fb8685e9103703089ff93.bindPopup(popup_ebbf7b5186de967c08d3952c6b4a924e)
+        ;
+
+        
+    
+    
+            marker_91d63c4d9f1fb8685e9103703089ff93.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d81fdd21ef3bc94f77a09f2cc43b1a6f = L.marker(
+                [50.361333333333334, 3.0289444444444444],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_c27a4df17614ad499a8d263914f5da19 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_acdaf998fddb7240ad3d1674e71a8e99 = $(`<div id="html_acdaf998fddb7240ad3d1674e71a8e99" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2025-0220<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation 5G pour l’industrie et le véhicule connectée.         </div>`)[0];
+                popup_c27a4df17614ad499a8d263914f5da19.setContent(html_acdaf998fddb7240ad3d1674e71a8e99);
+            
+        
+
+        marker_d81fdd21ef3bc94f77a09f2cc43b1a6f.bindPopup(popup_c27a4df17614ad499a8d263914f5da19)
+        ;
+
+        
+    
+    
+            marker_d81fdd21ef3bc94f77a09f2cc43b1a6f.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2a6a00a32cde2c3a1c82d39d3e8aa28e = L.marker(
+                [45.72694444444445, 4.97925],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_3860289e6f8dc3e2e0dd9a67e7cba006 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f087ba45275b2b8c3f878f97a2ef2eac = $(`<div id="html_f087ba45275b2b8c3f878f97a2ef2eac" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Auvergne-Rhône-Alpes<br>         <b>Numéro ARCEP :</b> 2025-0447<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Expérimentation pour tester des cas d'usages         </div>`)[0];
+                popup_3860289e6f8dc3e2e0dd9a67e7cba006.setContent(html_f087ba45275b2b8c3f878f97a2ef2eac);
+            
+        
+
+        marker_2a6a00a32cde2c3a1c82d39d3e8aa28e.bindPopup(popup_3860289e6f8dc3e2e0dd9a67e7cba006)
+        ;
+
+        
+    
+    
+            marker_2a6a00a32cde2c3a1c82d39d3e8aa28e.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_74391d32551f2cf13cbe5c9df38994c1 = L.marker(
+                [48.92572222222222, 2.3153888888888887],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_081db7e400b0decfff6e540663aaca62 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7ad0b8189828057e1d12c4005dd4fd09 = $(`<div id="html_7ad0b8189828057e1d12c4005dd4fd09" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2025-0447<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Expérimentation pour tester des cas d'usages         </div>`)[0];
+                popup_081db7e400b0decfff6e540663aaca62.setContent(html_7ad0b8189828057e1d12c4005dd4fd09);
+            
+        
+
+        marker_74391d32551f2cf13cbe5c9df38994c1.bindPopup(popup_081db7e400b0decfff6e540663aaca62)
+        ;
+
+        
+    
+    
+            marker_74391d32551f2cf13cbe5c9df38994c1.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_06a4b4c664382dc47c4df630d5740675 = L.marker(
+                [43.64833333333333, 6.345],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_758d8546021f182e4d23ff1747ab3064 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_10c3207d60c34ea55ae983778974e5e8 = $(`<div id="html_10c3207d60c34ea55ae983778974e5e8" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Provence-Alpes-Côte d'Azur<br>         <b>Numéro ARCEP :</b> 2025-0448<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> LUCEOR couvre le site de Canjuers en réseau cellulaire de type 5G privée. L’enjeu est d’expérimenter le déploiement d’une solution de suivi de la position et de l’état d’entités prenant part à un exercice d’entrainement militaire de type instrumentée.         </div>`)[0];
+                popup_758d8546021f182e4d23ff1747ab3064.setContent(html_10c3207d60c34ea55ae983778974e5e8);
+            
+        
+
+        marker_06a4b4c664382dc47c4df630d5740675.bindPopup(popup_758d8546021f182e4d23ff1747ab3064)
+        ;
+
+        
+    
+    
+            marker_06a4b4c664382dc47c4df630d5740675.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e907ace969cc3a9ef1e1f2ab99a09f96 = L.marker(
+                [48.41797222222222, 1.4896666666666667],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_ba45f18c874b484ac882647b1464029d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_73e813eda6a633c76c23efeb5e5e0b95 = $(`<div id="html_73e813eda6a633c76c23efeb5e5e0b95" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Centre-Val de Loire<br>         <b>Numéro ARCEP :</b> 2025-0492<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre d’un laboratoire 5G Privée. L’objectif est de tester différents équipements connectés en 5G (Caméras, smartphones, capteurs, etc.).         </div>`)[0];
+                popup_ba45f18c874b484ac882647b1464029d.setContent(html_73e813eda6a633c76c23efeb5e5e0b95);
+            
+        
+
+        marker_e907ace969cc3a9ef1e1f2ab99a09f96.bindPopup(popup_ba45f18c874b484ac882647b1464029d)
+        ;
+
+        
+    
+    
+            marker_e907ace969cc3a9ef1e1f2ab99a09f96.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f662773478849034a9d1bf6e63118830 = L.marker(
+                [48.84741666666667, 2.249277777777778],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_79b2b193c66bff09ed707990cdfade7b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7e37d823af4f54af9f3aca2653f510ef = $(`<div id="html_7e37d823af4f54af9f3aca2653f510ef" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2025-0839<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Plateforme d’expérimentation de captation vidéo sur réseau 5G SA en vue de fournir des solutions de connectivité mobile pour les grands évènements.         </div>`)[0];
+                popup_79b2b193c66bff09ed707990cdfade7b.setContent(html_7e37d823af4f54af9f3aca2653f510ef);
+            
+        
+
+        marker_f662773478849034a9d1bf6e63118830.bindPopup(popup_79b2b193c66bff09ed707990cdfade7b)
+        ;
+
+        
+    
+    
+            marker_f662773478849034a9d1bf6e63118830.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_be0bb5b396fb0f0596901639c90c7d2b = L.marker(
+                [47.75425, -3.3503055555555554],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_0f88719054ea46f800cf2bb04a8fdb41 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5f2ebcd860d7ccdac960aeab9d990523 = $(`<div id="html_5f2ebcd860d7ccdac960aeab9d990523" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Bretagne<br>         <b>Numéro ARCEP :</b> 2025-0660<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> L’expérimentation a pour but de tester la 5G privée dans différentes étapes de construction d’un navire et de mesurer le niveau de champs rayonné.Des cas d’usages smart industries permettront de démontrer les avantages de l’utilisation d’un réseau privé 5G.         </div>`)[0];
+                popup_0f88719054ea46f800cf2bb04a8fdb41.setContent(html_5f2ebcd860d7ccdac960aeab9d990523);
+            
+        
+
+        marker_be0bb5b396fb0f0596901639c90c7d2b.bindPopup(popup_0f88719054ea46f800cf2bb04a8fdb41)
+        ;
+
+        
+    
+    
+            marker_be0bb5b396fb0f0596901639c90c7d2b.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2243039eaf3fd4dfdf424e8a81ea9ad0 = L.marker(
+                [48.41797222222222, 1.4896666666666667],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_5f63aedb6267d5a4e8f22f264eaa5d3a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c720b0f7b90008fc397262eff8c24a78 = $(`<div id="html_c720b0f7b90008fc397262eff8c24a78" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Centre-Val de Loire<br>         <b>Numéro ARCEP :</b> 2025-0492<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation dans le cadre d’un laboratoire 5G Privée. L’objectif est de tester différents équipements connectés en 5G (Caméras, smartphones, capteurs, etc.).         </div>`)[0];
+                popup_5f63aedb6267d5a4e8f22f264eaa5d3a.setContent(html_c720b0f7b90008fc397262eff8c24a78);
+            
+        
+
+        marker_2243039eaf3fd4dfdf424e8a81ea9ad0.bindPopup(popup_5f63aedb6267d5a4e8f22f264eaa5d3a)
+        ;
+
+        
+    
+    
+            marker_2243039eaf3fd4dfdf424e8a81ea9ad0.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4ac0321de7967594a2d8aa4bf78e789b = L.marker(
+                [16.220555555555553, -61.5297222222222],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_5ff954e416115cd06b98a1a98db0350c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fc47df5864012abb4877a2500ca904cc = $(`<div id="html_fc47df5864012abb4877a2500ca904cc" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Guadeloupe<br>         <b>Numéro ARCEP :</b> 2025-0771<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Expérimentation de cas d'usage 4G/5G         </div>`)[0];
+                popup_5ff954e416115cd06b98a1a98db0350c.setContent(html_fc47df5864012abb4877a2500ca904cc);
+            
+        
+
+        marker_4ac0321de7967594a2d8aa4bf78e789b.bindPopup(popup_5ff954e416115cd06b98a1a98db0350c)
+        ;
+
+        
+    
+    
+            marker_4ac0321de7967594a2d8aa4bf78e789b.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_eb7cdc0792e415706ed0d90dab73a2b7 = L.marker(
+                [48.84355555555556, 2.6654999999999998],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_4a6f5e26c7e3666dad0ebbd526cebbb0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_817cbe2de0eb010d2f375f2c79c81716 = $(`<div id="html_817cbe2de0eb010d2f375f2c79c81716" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2025-0823<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> Expérimentation qui consiste à mener des tests approfondis sur un réseau 5G privé dans le but de réaliser des études de Recherche et Développement (R&D).         </div>`)[0];
+                popup_4a6f5e26c7e3666dad0ebbd526cebbb0.setContent(html_817cbe2de0eb010d2f375f2c79c81716);
+            
+        
+
+        marker_eb7cdc0792e415706ed0d90dab73a2b7.bindPopup(popup_4a6f5e26c7e3666dad0ebbd526cebbb0)
+        ;
+
+        
+    
+    
+            marker_eb7cdc0792e415706ed0d90dab73a2b7.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4dc1ccbab375750b350c0fa976c42bee = L.marker(
+                [48.712722222222226, 2.194472222222222],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_294a884b74577571ece47438f5ae3ca8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_92c3d5297db1505009d0562249c81314 = $(`<div id="html_92c3d5297db1505009d0562249c81314" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Île-de-France<br>         <b>Numéro ARCEP :</b> 2025-0821<br>         <b>Bande de fréquences :</b> 3,8 GHz<br>         <b>Description :</b> PRISM est une plateforme de recherche pour la fabrication intelligente et durable qui intègre des capacités clés pour l'industrie du futur. Des solutions robotiques innovantes, basées sur l'IA et le jumeau numérique, assurent une production plus agile, plus performante et plus respectueuse de l'homme.         </div>`)[0];
+                popup_294a884b74577571ece47438f5ae3ca8.setContent(html_92c3d5297db1505009d0562249c81314);
+            
+        
+
+        marker_4dc1ccbab375750b350c0fa976c42bee.bindPopup(popup_294a884b74577571ece47438f5ae3ca8)
+        ;
+
+        
+    
+    
+            marker_4dc1ccbab375750b350c0fa976c42bee.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c6b456af598a0035de615b733f80754d = L.marker(
+                [43.55661111111111, 4.183194444444445],
+                {
+}
+            ).addTo(map_bfb7c27e368d944005cb2ec367f8e961);
+        
+    
+        var popup_89c7de9fb495753cb0d40f2a44bfe6bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4792e660a20b581b3658492d3b96b631 = $(`<div id="html_4792e660a20b581b3658492d3b96b631" style="width: 100.0%; height: 100.0%;">         <b>Région :</b> Occitanie<br>         <b>Numéro ARCEP :</b> 2025-1042<br>         <b>Bande de fréquences :</b> 2,6 GHz TDD<br>         <b>Description :</b> Dans le cadre de ses activités sur le site d’Aigues Mortes, le GROUPE SALINS recherche une solution de connectivité fiable qui lui permettra de répondre à ses besoins liés à la transformation digitale de son entreprise,         </div>`)[0];
+                popup_89c7de9fb495753cb0d40f2a44bfe6bd.setContent(html_4792e660a20b581b3658492d3b96b631);
+            
+        
+
+        marker_c6b456af598a0035de615b733f80754d.bindPopup(popup_89c7de9fb495753cb0d40f2a44bfe6bd)
+        ;
+
+        
+    
+    
+            marker_c6b456af598a0035de615b733f80754d.bindTooltip(
+                `<div>
+                     Cliquer pour plus d'infos
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

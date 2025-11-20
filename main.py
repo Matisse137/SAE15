@@ -8,8 +8,7 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 
-df = pd.read_csv(r"experimentations_5G.csv", encoding="Windows-1252", sep=";", engine="python")
-df.head()
+df = None
 
 def frequence_region():
     region_counts = df["Région"].value_counts()  
@@ -162,7 +161,7 @@ def diagramme_techno_region():
     plt.xticks(rotation=45, ha="right")
     plt.legend()
     plt.tight_layout()
-    plt.savefig("techno_region.png")
+    plt.savefig("diagramme_techno_par_region.png")
     plt.close()
 
     
@@ -241,7 +240,6 @@ def croissant(compteur):
     acteurs = list(compteur.keys())
     valeurs = list(compteur.values())
     return acteurs, valeurs
-
     
 def graphe(acteurs, valeurs):
     plt.figure(figsize=(8, 12))
@@ -251,7 +249,7 @@ def graphe(acteurs, valeurs):
     plt.ylabel("Nombre d'expérimentations")
     plt.xticks(rotation=0, ha='right')
     plt.tight_layout()
-    plt.savefig("nombre_temporelle_experimentations.png")  # FIX: ajout .png
+    plt.savefig("nombre_temporelle_experimentations.png") 
     plt.close()
 
     
@@ -287,15 +285,14 @@ def launch_pyplot():
     compteur = graphique_experimentations_par_acteur(df)
     acteurs, valeurs = croissant(compteur)
     graphe(acteurs, valeurs)
-    plt.close()
+    tracer_evolution(df)
+    plt.close('all')
 
 
 def launch_folium(file_name):
     carte = folium.Map(location=[48.8566, 2.3522], zoom_start=12)
     carte.save("carte_interactive.html")
-    
-    df = pd.read_csv(rf"{file_name}", encoding="Windows-1252", sep=";", engine="python")
-    
+        
     carte = folium.Map(location=[48.8566, 2.3522], zoom_start=12)
     
     for i in range(len(df)):
@@ -322,8 +319,27 @@ def launch_folium(file_name):
     
     carte.save("carte_interactive.html")
 
-def empty():
-    return
+def exist():
+    file_list = [
+    "diagramme_a_barre_region.png",
+    "diagramme_dep.png",
+    "diagramme_circulaire.png",
+    "diagramme_techno.png",
+    "diagramme_techno_par_dep.png",
+    "diagramme_techno_par_region.png",
+    "techno_region.png",
+    "diagramme_usage.png",
+    "diagramme_usage_par_departement.png",
+    "diagramme_usage_par_region.png",
+    "evolution_temporelle_experimentations.png",
+    "nombre_temporelle_experimentations.png",
+    "carte_interactive.html"
+    ]
+
+    for elt in file_list:
+        if not os.path.isfile(elt):
+            return False
+    return True
 
 global_window = None
 global_top_frame = None
@@ -340,10 +356,15 @@ def init_window_frame(title, size):
     window = tk.Tk() 
     window.title(title) 
     window.geometry(size)
+
+    style = ttk.Style(window)
+    style.configure("TButton", background="#d9d9d9")
+    style.map("TButton", background=[("active", "#c0c0c0")])
     
     top_frame = ttk.Frame(window)
     top_frame.grid(row=0)
-    bottom_frame = ttk.Frame(window)
+
+    bottom_frame = tk.Frame(window, bg="#3a3a3a")
     bottom_frame.grid(row=1)
     
     global_window = window
@@ -375,15 +396,23 @@ def add_entry(frame, x, y, pad_x, pad_y):
 
 def add_img(file_name, anchor_, size_x, size_y, x, y, pad_x, pad_y):
     global global_bottom_frame
+    global global_window
     
     flush(global_bottom_frame)
     
+    frame = tk.Frame(global_bottom_frame, bg="#3a3a3a")
+    frame.grid(row=x, column=y, padx=pad_x, pady=pad_y)
+    
     img = Image.open(file_name)
-    img = img.resize((size_x, size_y))
-    tk_image = ImageTk.PhotoImage(img)
 
-    canvas = tk.Canvas(global_bottom_frame, width=size_x, height=size_y)
-    canvas.grid(row=x, column=y, padx=pad_x, pady=pad_y)
+    max_w, max_h = 900, 480
+    img.thumbnail((max_w, max_h))
+
+    tk_image = ImageTk.PhotoImage(img, master=global_window)
+
+    canvas = tk.Canvas(frame, width=img.width, height=img.height,
+                       bg="#3a3a3a", highlightthickness=0)
+    canvas.pack()
     canvas.create_image(0, 0, image=tk_image, anchor=anchor_)
     
     canvas.image = tk_image
@@ -392,8 +421,15 @@ def add_img(file_name, anchor_, size_x, size_y, x, y, pad_x, pad_y):
 def btn_file():
     global global_top_frame
     global global_file_entry
+    global df
+    
+    add_label(global_top_frame, "Veuillez patienter", 1, 2, 2, 2)
+    global_window.update_idletasks()
     
     file_name = global_file_entry.get()
+    
+    df = pd.read_csv(rf"{file_name}", encoding="Windows-1252", sep=";", engine="python")
+    df.head()
     
     if not os.path.isfile(file_name) or not file_name.lower().endswith(".csv"):
         error_case("Le fichier n'existe pas ou n'est pas un CSV valide.")
@@ -405,7 +441,9 @@ def btn_file():
         error_case(f"Erreur lors de la lecture du CSV : {str(e)}")
         return
     
-    launch_pyplot()  
+    if not exist():
+        launch_pyplot()
+        launch_folium(df)
     flush(global_top_frame)
     
     add_button(global_top_frame, "Régions", btn_region, 0, 0, 2, 2)
@@ -479,7 +517,7 @@ def error_case(txt):
 def launch_window():
     global global_window
     
-    init_window_frame("Analyse CSV", "960x540")
+    init_window_frame("Analyse CSV", "1024x600")
     
     global_window.mainloop()
 
